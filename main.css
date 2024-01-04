@@ -1,0 +1,501 @@
+body {
+    background:radial-gradient(ellipse at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    height: 100vh;
+  
+}
+
+p,li{
+    color:white;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.main-content{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    padding:0 ;
+}
+
+.header-content{
+    margin:0 auto;
+    display: flex;
+    border-radius: 5px;
+}
+
+.header-left{
+    font-weight: 800;
+}
+
+.score-box{
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+
+}
+
+.score-box > p{
+    color:hsl(229, 64%, 46%);
+    padding:0;
+    margin:0;
+    font-weight: 800;
+}
+
+#score{
+    font-weight: 800;
+    color:hsl(229, 25%, 31%);
+}
+
+.pickCircle{
+    position: relative;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#pickBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circleContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 375px) {
+
+    header{
+        padding-top:5vw;
+        width: 75vw;
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1vw 3vw 1vw 5vw;
+        border:solid white 0.5vw;
+        height: auto;
+        width: 100%;
+    }
+
+    .header-left > ul > li{
+        line-height: 4vw;
+        font-size: 4vw;
+        
+    }
+
+    .score-box{
+        width: 15vw;
+        padding:1.5vw;
+
+    }
+
+    .score-box > p{
+
+        font-size: 3vw;
+
+    }
+    
+    #score{
+        font-size: 9vw;
+        padding:0;
+        margin:0;
+    }
+
+    #pickBox{
+        margin:50vw auto;
+
+    }
+
+    .triImg{
+        width: 55vw;
+        z-index: 0;
+    }
+
+    .pickCircle{
+        width: 25vw;
+        height: 25vw;
+
+        z-index: 99;
+    }
+
+    #pickPaper{
+        border-width: 4px;
+        border-style: solid;
+        border-image: radial-gradient(circle at center, hsl(230, 89%, 62%),hsl(230, 89%, 65%)) 1;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        background-clip: border-box;
+        bottom: 60vw;
+        left: 10vw;
+        
+    }
+
+    #pickScissors{
+        border-width: 4px;
+        border-style: solid;
+        border-image: radial-gradient(circle at center, hsl(39, 89%, 49%), hsl(40, 84%, 53%)) 1;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom:20vw;
+    }
+
+    #pickRock{
+        border-width: 4px;
+        border-style: solid;
+        border-image: radial-gradient(circle at center, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) 1;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom:60vw;
+        right:10vw;
+    }
+
+    .circleContainer{
+        width: 100%;
+    }
+    
+
+
+}
+
+
+@media only screen and (min-width: 375px) {
+
+    header{
+        padding-top:5vw;
+        width: 75vw;
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0.5vw 3vw 0.5vw 5vw;
+        border:solid white 0.5vw;
+        height: auto;
+        width: 100%;
+    }
+
+    .header-left > ul > li{
+        line-height: 4vw;
+        font-size: 4vw;
+        
+    }
+
+    .score-box{
+        width: 15vw;
+        padding:1.2vw;
+
+    }
+
+    .score-box > p{
+
+        font-size: 2.25vw;
+
+    }
+    
+    #score{
+        font-size: 6vw;
+        padding:0;
+        margin:0;
+    }
+
+    #pickBox{
+        margin:40vw auto;
+    }
+
+    .triImg{
+        width: 45vw;
+    }
+
+    
+
+}
+@media only screen and (min-width: 600px) {
+
+    header{
+        padding-top:5vw;
+        width: 75vw;
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1vw 3vw 1vw 5vw;
+        border:solid white 0.2vw;
+        height: auto;
+        width: 100%;
+    }
+
+    .header-left > ul > li{
+        line-height: 2.75vw;
+        font-size: 3vw;
+        
+    }
+
+    .score-box{
+        width: 12vw;
+        padding:1.5vw;
+
+    }
+
+    .score-box > p{
+
+        font-size: 2vw;
+
+    }
+    
+    #score{
+        font-size: 5vw;
+        padding:0;
+        margin:0;
+    }
+
+    #pickBox{
+        margin:30vw auto;
+    }
+
+    .triImg{
+        width: 30vw;
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    header{
+        padding-top:5vw;
+        width: 65vw;
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1vw 3vw 1vw 5vw;
+        border:solid white 0.1vw;
+        height: auto;
+        width: 100%;
+    }
+
+    .header-left > ul > li{
+        line-height: 2.2vw;
+        font-size: 2.5vw;
+        
+    }
+
+    .score-box{
+        width: 10vw;
+        padding:1.5vw;
+
+    }
+
+    .score-box > p{
+
+        font-size: 1.5vw;
+
+    }
+    
+    #score{
+        font-size: 4vw;
+        padding:0;
+        margin:0;
+    }
+
+    
+    #pickBox{
+        margin:15vw auto;
+    }
+
+    .triImg{
+        width: 25vw;
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    header{
+        padding-top:2vw;
+        width: 55vw;
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1vw 1vw 1vw 2vw;
+        border:solid white 0.1vw;
+        height: auto;
+        width: 100%;
+    }
+
+    .header-left > ul > li{
+        line-height: 1.75vw;
+        font-size: 1.75vw;
+        
+    }
+
+    .score-box{
+        width: 7.5vw;
+        padding:1.2vw;
+
+    }
+
+    .score-box > p{
+
+        font-size: 1.2vw;
+
+    }
+    
+    #score{
+        font-size: 3vw;
+        padding:0;
+        margin:0;
+    }
+
+    #pickBox{
+        margin:10vw auto;
+    }
+
+    .triImg{
+        width: 20vw;
+    }
+    
+
+}
+
+@media only screen and (min-width: 1100px) {
+
+    header{
+        padding-top:2vw;
+        width: 50vw;
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1vw 1vw 1vw 1.5vw;
+        border:solid white 0.1vw;
+        height: auto;
+        width: 100%;
+    }
+
+    .header-left > ul > li{
+        line-height: 1.5vw;
+        font-size: 1.5vw;
+        
+    }
+
+    .score-box{
+        width: 6vw;
+        padding:1.25vw;
+
+    }
+
+    .score-box > p{
+
+        font-size: 1vw;
+
+    }
+    
+    #score{
+        font-size: 2.5vw;
+        padding:0;
+        margin:0;
+    }
+
+
+    #pickBox{
+        margin:10vw auto;
+    }
+
+    .triImg{
+        width: 18vw;
+    }
+    
+
+}
+
+@media only screen and (min-width: 1366px) {
+
+    header{
+        padding-top:2vw;
+        width: 50vw;
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1vw 1.25vw 1vw 1.5vw;
+        border:solid white 0.1vw;
+        height: auto;
+        width: 100%;
+    }
+
+    .header-left > ul > li{
+        line-height: 1.5vw;
+        font-size: 1.5vw;
+        
+    }
+
+    .score-box{
+        width: 6vw;
+        padding:1.2vw;
+
+    }
+
+    .score-box > p{
+
+        font-size: 1vw;
+
+    }
+    
+    #score{
+        font-size: 2.5vw;
+        padding:0;
+        margin:0;
+    }
+
+    #pickBox{
+        margin:8vw auto;
+    }
+
+    .triImg{
+        width: 15vw;
+    }
+    
+    
+
+}
+
+
+

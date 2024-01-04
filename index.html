@@ -2,29 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="/styles/styles.css">
-
+  <link rel="stylesheet" href="main.css"> 
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -32,9 +17,9 @@
     <div class="header-content">
       <div class="header-left">
         <ul>
-          <li>Rock</li>
-          <li>Paper</li>
-          <li>Scissors</li>
+          <li>ROCK</li>
+          <li>PAPER</li>
+          <li>SCISSORS</li>
         </ul>
       </div>
 
@@ -45,10 +30,30 @@
     </div>
   </header>
 
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <section>
+
+    <div id="pickBox">
+      <img src="/images/bg-triangle.svg" alt="Triangle" class="triImg">
+      <div class="circleContainer">
+        <div id="pickPaper" class="pickCircle"></div>
+        <div id="pickScissors" class="pickCircle"></div>
+        <div id="pickRock" class="pickCircle"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- Your additional content goes here -->
+  <!-- <div>
+    <p>Score</p>
+    <p>Rules</p>
+    <p>You Picked</p>
+    <p>The House Picked</p>
+    <p>You Win</p>
+    <p>You Lose</p>
+    <p>Play Again</p>
   </div> -->
+
+  <!-- Your JavaScript or other HTML content goes here -->
+
 </body>
 </html>
