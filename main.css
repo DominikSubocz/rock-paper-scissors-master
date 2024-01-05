@@ -54,7 +54,7 @@ ul{
 .pickCircle{
     position: relative;
     background-color: white;
-    border-radius: 50px;
+    border-radius: 50%;
 }
 
 #pickBox {
@@ -69,6 +69,33 @@ ul{
     position: relative;
     z-index: 1;
   }
+
+#pickPaper, #pickScissors, #pickRock{
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+#pickPaper{
+    background-image: linear-gradient(white, white), linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+
+}
+
+#pickScissors{
+    background-image: linear-gradient(white, white), linear-gradient(to right,hsl(39, 89%, 49%) ,  hsl(40, 84%, 53%));
+
+}
+
+#pickRock{
+    background-image: linear-gradient(white, white), linear-gradient(to right, hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+
+}
+
+#pickBtn{
+    position: relative;
+    background-color: transparent;
+    border:none;
+
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 375px) {
@@ -132,35 +159,43 @@ ul{
     }
 
     #pickPaper{
-        border-width: 4px;
-        border-style: solid;
-        border-image: radial-gradient(circle at center, hsl(230, 89%, 62%),hsl(230, 89%, 65%)) 1;
+        border: double 3vw transparent;
         margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        background-clip: border-box;
         bottom: 60vw;
         left: 10vw;
         
     }
 
     #pickScissors{
-        border-width: 4px;
-        border-style: solid;
-        border-image: radial-gradient(circle at center, hsl(39, 89%, 49%), hsl(40, 84%, 53%)) 1;
+        border: double 3vw transparent;
         margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:20vw;
+        bottom:60vw;
+        right: 10vw;
+
     }
 
     #pickRock{
-        border-width: 4px;
-        border-style: solid;
-        border-image: radial-gradient(circle at center, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) 1;
+        border: double 3vw transparent;
         margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:60vw;
-        right:10vw;
+        bottom:25vw;
     }
 
     .circleContainer{
         width: 100%;
+    }
+
+    #pickBtn{
+
+        right: 2.5vw;
+        bottom:2.5vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .pickIcon{
+        margin-right:1vw;
+        width: 12vw;
+        height: auto;
     }
     
 
@@ -216,8 +251,57 @@ ul{
     }
 
     .triImg{
-        width: 45vw;
+        width: 55vw;
     }
+
+    .pickCircle{
+        width: 22.5vw;
+        height: 22.5vw;
+
+        z-index: 99;
+    }
+
+    #pickPaper{
+        border: double 3vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom: 60vw;
+        left: 10vw;
+        
+    }
+
+    #pickScissors{
+        border: double 3vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom:60vw;
+        right: 10vw;
+
+    }
+
+    #pickRock{
+        border: double 3vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom:25vw;
+    }
+
+    .circleContainer{
+        width: 100%;
+    }
+
+    #pickBtn{
+
+        right: 2.5vw;
+        bottom:2.5vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .pickIcon{
+        margin-right:2.5vw;
+        width: 10vw;
+        height: auto;
+    }
+
+
 
     
 
@@ -270,8 +354,57 @@ ul{
     }
 
     .triImg{
-        width: 30vw;
+        width: 35vw;
     }
+
+    .pickCircle{
+        width: 15vw;
+        height: 15vw;
+
+        z-index: 99;
+    }
+
+    #pickPaper{
+        border: double 2vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom: 40vw;
+        left: 22.5vw;
+        
+    }
+
+    #pickScissors{
+        border: double 2vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom:40vw;
+        right: 22.5vw;
+
+    }
+
+    #pickRock{
+        border: double 2vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom:15vw;
+    }
+
+    .circleContainer{
+        width: 100%;
+    }
+
+    #pickBtn{
+
+        right: 2.5vw;
+        bottom:2.5vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .pickIcon{
+        margin-right:10vw;
+        margin-bottom:7.5vw;
+        width: 7.5vw;
+        height: auto;
+    }
+
 
     
 
@@ -326,8 +459,57 @@ ul{
     }
 
     .triImg{
-        width: 25vw;
+        width: 30vw;
     }
+
+    .pickCircle{
+        width: 13vw;
+        height: 13vw;
+
+        z-index: 99;
+    }
+
+    #pickPaper{
+        border: double 1.75vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom: 33vw;
+        left: 28vw;
+        
+    }
+
+    #pickScissors{
+        border: double 1.75vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom: 33vw;
+        right: 28vw;
+
+    }
+
+    #pickRock{
+        border: double 1.75vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom:15vw;
+    }
+
+    .circleContainer{
+        width: 100%;
+    }
+
+    #pickBtn{
+
+        right: 2.5vw;
+        bottom:2.5vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .pickIcon{
+        margin-right:12.5vw;
+        margin-bottom:10vw;
+        width: 6vw;
+        height: auto;
+    }
+
 
     
 
@@ -381,8 +563,57 @@ ul{
     }
 
     .triImg{
-        width: 20vw;
+        width: 25vw;
     }
+
+    .pickCircle{
+        width: 11vw;
+        height: 11vw;
+
+        z-index: 99;
+    }
+
+    #pickPaper{
+        border: double 1.5vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom: 28vw;
+        left: 32vw;
+        
+    }
+
+    #pickScissors{
+        border: double 1.5vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom: 28vw;
+        right: 32vw;
+
+    }
+
+    #pickRock{
+        border: double 1.5vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom:12vw;
+    }
+
+    .circleContainer{
+        width: 100%;
+    }
+
+    #pickBtn{
+
+        right: 2.5vw;
+        bottom:2.5vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .pickIcon{
+        margin-right:14vw;
+        margin-bottom:12vw;
+        width: 4.5vw;
+        height: auto;
+    }
+
     
 
 }
@@ -438,6 +669,55 @@ ul{
     .triImg{
         width: 18vw;
     }
+
+    .pickCircle{
+        width: 10vw;
+        height: 10vw;
+
+        z-index: 99;
+    }
+
+    #pickPaper{
+        border: double 1.25vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom: 22vw;
+        left: 33vw;
+        
+    }
+
+    #pickScissors{
+        border: double 1.25vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom: 22vw;
+        right: 33vw;
+
+    }
+
+    #pickRock{
+        border: double 1.25vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom:7.5vw;
+    }
+
+    .circleContainer{
+        width: 100%;
+    }
+
+    #pickBtn{
+
+        right: 2.5vw;
+        bottom:2.5vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .pickIcon{
+        margin-right:15vw;
+        margin-bottom:13vw;
+        width: 4vw;
+        height: auto;
+    }
+
     
 
 }
@@ -491,6 +771,54 @@ ul{
 
     .triImg{
         width: 15vw;
+    }
+
+    .pickCircle{
+        width: 8vw;
+        height: 8vw;
+
+        z-index: 99;
+    }
+
+    #pickPaper{
+        border: double 1vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom: 18vw;
+        left: 37.5vw;
+        
+    }
+
+    #pickScissors{
+        border: double 1vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom: 18vw;
+        right: 37.5vw;
+
+    }
+
+    #pickRock{
+        border: double 1vw transparent;
+        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+        bottom:7.5vw;
+    }
+
+    .circleContainer{
+        width: 100%;
+    }
+
+    #pickBtn{
+
+        right: 2.5vw;
+        bottom:2.5vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .pickIcon{
+        margin-right:17vw;
+        margin-bottom:16vw;
+        width: 3.5vw;
+        height: auto;
     }
     
     
