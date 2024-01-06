@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="main.css"> 
+  <link rel="stylesheet" href="/styles/main.css"> 
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+  <script src="scripts/main.js"></script>
 </head>
 <body>
 
@@ -36,16 +37,21 @@
       <img src="/images/bg-triangle.svg" alt="Triangle" class="triImg">
       <div class="circleContainer">
         <div id="pickPaper" class="pickCircle">
-          <button id="pickBtn"><img class="pickIcon paperIcon" src="/images/icon-paper.svg" alt="Icon of black hand showing paper move for rock paper scissors game."></button>
+          <button onclick="clickPaper()" id="pickBtn"><img class="pickIcon paperIcon" src="/images/icon-paper.svg" alt="Icon of black hand showing paper move for rock paper scissors game."></button>
         </div>
         <div id="pickRock" class="pickCircle">
-          <button id="pickBtn"><img class="pickIcon rockIcon" src="/images/icon-rock.svg" alt="Icon of black hand showing paper move for rock paper scissors game."></button>
+          <button onclick="clickRock()" id="pickBtn"><img class="pickIcon rockIcon" src="/images/icon-rock.svg" alt="Icon of black hand showing paper move for rock paper scissors game."></button>
         </div>
         <div id="pickScissors" class="pickCircle">
-          <button id="pickBtn"><img class="pickIcon rockIcon" src="/images/icon-scissors.svg" alt="Icon of black hand showing paper move for rock paper scissors game."></button>
+          <button onclick="clickScissors()"  id="pickBtn"><img class="pickIcon rockIcon" src="/images/icon-scissors.svg" alt="Icon of black hand showing paper move for rock paper scissors game."></button>
         </div>
 
       </div>
+    </div>
+
+    <div id="resultBox">
+
+      
     </div>
 
   </section>
