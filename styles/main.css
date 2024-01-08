@@ -53,19 +53,14 @@ ul{
 
 .pickCircle{
     position: relative;
-    background-color: white;
     border-radius: 50%;
 }
 
-.pickCircle:hover{
+/* #pickPaper:hover{
     filter: brightness(75%);
-}
+} */
 
-#pickBox {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 .circleContainer {
     display: flex;
@@ -74,7 +69,7 @@ ul{
     z-index: 1;
   }
 
-#pickPaper, #pickScissors, #pickRock{
+#pickPaper, #pickScissors, #pickRock , .userChoicePaper, .userChoiceRock, .userChoiceScissors{
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
@@ -91,7 +86,7 @@ ul{
 
 #pickRock{
     background-image: linear-gradient(white, white), linear-gradient(to right, hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
-
+    
 }
 
 #pickBtn{
@@ -100,6 +95,34 @@ ul{
     border:none;
 
 }
+
+#pickBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userChoicePaper{
+    background-image: linear-gradient(white, white), linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    display: flex;
+}
+.userChoiceRock{
+    background-image: linear-gradient(white, white), linear-gradient(to right, hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+    display: flex;
+}
+
+.userChoiceScissors{
+    background-image: linear-gradient(white, white), linear-gradient(to right,hsl(39, 89%, 49%) ,  hsl(40, 84%, 53%));
+    display: flex;
+}
+
+#resultBox{
+    display: none;
+    position: relative;
+}
+
+
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 375px) {
@@ -162,6 +185,8 @@ ul{
         z-index: 99;
     }
 
+
+
     #pickPaper{
         border: double 3vw transparent;
         margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
@@ -202,7 +227,45 @@ ul{
         height: auto;
     }
 
-    
+    .displayRockIcon{
+        width: 15vw;
+        height: 15vw;
+        margin-left:3.5vw;
+        margin-top:5vw;
+    }
+
+    .displayPaperIcon, .displayScissorsIcon{
+        width: 15vw;
+        height: 17vw;
+        margin-left:4.5vw;
+        margin-top:5vw;
+    }
+
+    .userChoicePaper{
+        border: double 3vw transparent;
+    }
+
+    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
+        border: double 3vw transparent;
+        flex-direction: column;
+    }
+
+    .userChoiceScissors{
+        border: double 3vw transparent;
+    }
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:10vw;
+        top:30vw;
+    }
+
+    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
+        margin-top:12vw;
+        font-size: 4.5vw;
+        text-align: center;
+    }
 
 
 }
@@ -304,6 +367,47 @@ ul{
         margin-right:2.5vw;
         width: 10vw;
         height: auto;
+    }
+
+
+    .displayRockIcon{
+        width: 14vw;
+        height: 14vw;
+        margin-left:3.5vw;
+        margin-top:5vw;
+    }
+
+    .displayPaperIcon, .displayScissorsIcon{
+        width: 14vw;
+        height: 15vw;
+        margin-left:4vw;
+        margin-top:5vw;
+    }
+
+    .userChoicePaper{
+        border: double 3vw transparent;
+    }
+
+    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
+        border: double 3vw transparent;
+        flex-direction: column;
+    }
+
+    .userChoiceScissors{
+        border: double 3vw transparent;
+    }
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:10vw;
+        top:30vw;
+    }
+
+    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
+        margin-top:12vw;
+        font-size: 4.5vw;
+        text-align: center;
     }
 
 
@@ -411,6 +515,47 @@ ul{
     }
 
 
+    .displayRockIcon{
+        width: 8vw;
+        height: 8vw;
+        margin-left:3.5vw;
+        margin-top:4vw;
+    }
+
+    .displayPaperIcon, .displayScissorsIcon{
+        width: 8vw;
+        height: 10vw;
+        margin-left:3vw;
+        margin-top:3vw;
+    }
+
+    .userChoicePaper{
+        border: double 3vw transparent;
+    }
+
+    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
+        border: double 3vw transparent;
+        flex-direction: column;
+    }
+
+    .userChoiceScissors{
+        border: double 3vw transparent;
+    }
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:10vw;
+        top:30vw;
+    }
+
+    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
+        margin-top:12vw;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+
     
 
 }
@@ -511,6 +656,67 @@ ul{
     .pickIcon{
         width: 6vw;
         height: auto;
+    }
+
+
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:8vw;
+        top:15vw;
+    }
+
+
+    .displayRockIcon{
+        width: 7.5vw;
+        height: 7.5vw;
+        margin-left:3vw;
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon, .displayScissorsIcon{
+        width: 7.5vw;
+        height: 9vw;
+    }
+
+    .displayScissorsIcon{
+        margin-left:4vw;
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon{
+
+        margin-left:3vw;
+        margin-bottom:2vw;
+    }
+
+    .userChoicePaper{
+        border: double 3vw transparent;
+    }
+
+    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
+        border: double 3vw transparent;
+        flex-direction: column-reverse;
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .userChoiceScissors{
+        border: double 3vw transparent;
+    }
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:10vw;
+        top:15vw;
+    }
+
+    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
+        margin-bottom:8vw;
+        font-size: 2.5vw;
+        text-align: center;
     }
 
 
@@ -616,6 +822,66 @@ ul{
         height: auto;
     }
 
+
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:8vw;
+        top:15vw;
+    }
+
+
+    .displayRockIcon{
+        width: 7.5vw;
+        height: 7.5vw;
+        margin-left:3vw;
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon, .displayScissorsIcon{
+        width: 7.5vw;
+        height: 9vw;
+    }
+
+    .displayScissorsIcon{
+        margin-left:4vw;
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon{
+
+        margin-left:3vw;
+        margin-bottom:2vw;
+    }
+
+    .userChoicePaper{
+        border: double 3vw transparent;
+    }
+
+    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
+        border: double 3vw transparent;
+        flex-direction: column-reverse;
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .userChoiceScissors{
+        border: double 3vw transparent;
+    }
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:10vw;
+        top:15vw;
+    }
+
+    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
+        margin-bottom:8vw;
+        font-size: 2.5vw;
+        text-align: center;
+    }
     
 
 }
@@ -718,6 +984,68 @@ ul{
         height: auto;
     }
 
+
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:8vw;
+        top:15vw;
+    }
+
+
+    .displayRockIcon{
+        width: 7.5vw;
+        height: 7.5vw;
+        margin-left:3vw;
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon, .displayScissorsIcon{
+        width: 7.5vw;
+        height: 9vw;
+    }
+
+    .displayScissorsIcon{
+        margin-left:4vw;
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon{
+
+        margin-left:3vw;
+        margin-bottom:2vw;
+    }
+
+    .userChoicePaper{
+        border: double 3vw transparent;
+    }
+
+    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
+        border: double 3vw transparent;
+        flex-direction: column-reverse;
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .userChoiceScissors{
+        border: double 3vw transparent;
+    }
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:10vw;
+        top:15vw;
+    }
+
+    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
+        margin-bottom:8vw;
+        font-size: 2.5vw;
+        text-align: center;
+    }
+
+    
     
 
 }
@@ -818,6 +1146,66 @@ ul{
 
         width: 3.5vw;
         height: auto;
+    }
+
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:8vw;
+        top:10vw;
+    }
+
+
+    .displayRockIcon{
+        width: 7.5vw;
+        height: 7.5vw;
+        margin-left:3vw;
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon, .displayScissorsIcon{
+        width: 7.5vw;
+        height: 9vw;
+    }
+
+    .displayScissorsIcon{
+        margin-left:4vw;
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon{
+
+        margin-left:3vw;
+        margin-bottom:2vw;
+    }
+
+    .userChoicePaper{
+        border: double 3vw transparent;
+    }
+
+    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
+        border: double 3vw transparent;
+        flex-direction: column-reverse;
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .userChoiceScissors{
+        border: double 3vw transparent;
+    }
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:10vw;
+        bottom:15vw;
+    }
+
+    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
+        margin-bottom:6vw;
+        font-size: 2.5vw;
+        text-align: center;
     }
     
     

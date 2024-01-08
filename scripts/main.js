@@ -2,6 +2,8 @@ let userChoice = "";
 var delayInMilliseconds = 1000; //1 seconds
 
 
+
+
 function clickPaper() {
     userPicks(1);
 }
@@ -14,14 +16,43 @@ function clickScissors() {
     userPicks(3);
 }
 
+// 1 = paper
+// 2 = rock
+// 3 = scissors
+
 function userPicks(userNumber) {
+    let pickBox = document.getElementById("pickBox");
+    let Box = document.getElementById("resultBox");
+
+    let paperBox = document.getElementById("userChoicePaper");
+    let rockBox = document.getElementById("userChoiceRock");
+    let scissorsBox = document.getElementById("userChoiceScissors");
     userChoice = userNumber;
-    checkUserChoice();
-    let hide = document.getElementById("pickBox");
-    hide.style.display = "none";
+    // checkUserChoice();
+    pickBox.style.display = "none";
+    resultBox.style.display="flex";
+
+    if (userChoice == 1){
+        paperBox.style.display = "flex";
+        rockBox.style.display= "none";
+        scissorsBox.style.display= "none";
+    }
+
+    else if (userChoice == 2){
+        rockBox.style.display = "flex";
+        scissorsBox.style.display= "none";
+        paperBox.style.display = "none";
+    }
+
+    else{
+        scissorsBox.style.display = "flex";
+        paperBox.style.display = "none";
+        rockBox.style.display= "none";
+    }
     setTimeout(findWinner, delayInMilliseconds); // Call the function to find the winner after the user has picked
 }
 
+// For debuging purposes
 function checkUserChoice() {
     console.log("User's choice is: " + userChoice);
 }
