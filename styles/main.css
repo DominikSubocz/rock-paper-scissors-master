@@ -6,6 +6,7 @@ body {
   
 }
 
+
 p,li{
     color:white;
     text-decoration: none;
@@ -102,24 +103,129 @@ ul{
     align-items: center;
 }
 
+@keyframes changeBackgroundRock { 
+
+    0%{
+        background-image: linear-gradient(hsl(229, 25%, 31%), hsl(229, 25%, 31%)), linear-gradient(to right,hsl(229, 25%, 31%) ,  hsl(229, 25%, 31%));
+        opacity: 50%;
+    }
+
+    100%{
+        opacity: 100%;
+        background-image: linear-gradient(white, white), linear-gradient(to right, hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+
+    }
+}
+
+
+@keyframes changeBackgroundPaper { 
+
+    0%{
+        background-image: linear-gradient(hsl(229, 25%, 31%), hsl(229, 25%, 31%)), linear-gradient(to right,hsl(229, 25%, 31%) ,  hsl(229, 25%, 31%));
+        opacity: 50%;
+
+    }
+
+    100%{
+        opacity: 100%;
+        background-image: linear-gradient(white, white), linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+
+    }
+}
+
+
+@keyframes changeBackgroundScissors { 
+
+    0%{
+        background-image: linear-gradient(hsl(229, 25%, 31%), hsl(229, 25%, 31%)), linear-gradient(to right,hsl(229, 25%, 31%) ,  hsl(229, 25%, 31%));
+        opacity: 50%;
+
+    }
+
+    100%{
+        opacity: 100%;
+        background-image: linear-gradient(white, white), linear-gradient(to right,hsl(39, 89%, 49%) ,  hsl(40, 84%, 53%));
+
+    }
+}
+
+@keyframes changeImgOpacity {
+    0%{
+        opacity: 0%;
+    }
+
+    100%{
+        opacity: 100%;
+
+    }
+}
+
 .userChoicePaper{
     background-image: linear-gradient(white, white), linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-    display: flex;
+
 }
 .userChoiceRock{
     background-image: linear-gradient(white, white), linear-gradient(to right, hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
-    display: flex;
+
 }
 
 .userChoiceScissors{
     background-image: linear-gradient(white, white), linear-gradient(to right,hsl(39, 89%, 49%) ,  hsl(40, 84%, 53%));
-    display: flex;
+
+}
+
+.compChoiceRock{
+    opacity: 50%;
+    background-image: linear-gradient(hsl(229, 25%, 31%), hsl(229, 25%, 31%)), linear-gradient(to right,hsl(229, 25%, 31%) ,  hsl(229, 25%, 31%));
+    transition: background-image 1s ease; /* Smooth transition effect */
+    animation: changeBackgroundRock 1.5s ease 1.5s forwards; /* Apply animation after a delay of 2 seconds */
+}
+
+.compChoicePaper{
+    opacity: 50%;
+    background-image: linear-gradient(hsl(229, 25%, 31%), hsl(229, 25%, 31%)), linear-gradient(to right,hsl(229, 25%, 31%) ,  hsl(229, 25%, 31%));
+    transition: background-image 1s ease; /* Smooth transition effect */
+    animation: changeBackgroundPaper 1.5s ease 1.5s forwards; /* Apply animation after a delay of 2 seconds */
+}
+
+.compChoiceScissors{
+    opacity: 50%;
+    background-image: linear-gradient(hsl(229, 25%, 31%), hsl(229, 25%, 31%)), linear-gradient(to right,hsl(229, 25%, 31%) ,  hsl(229, 25%, 31%));
+    transition: background-image 1s ease; /* Smooth transition effect */
+    animation: changeBackgroundScissors 1.5s ease 1.5s forwards; /* Apply animation after a delay of 2 seconds */
+}
+
+.compChoiceRock > img, .compChoicePaper > img, .compChoiceScissors > img{
+    opacity: 0%;
+    animation: changeImgOpacity 1s ease 2s forwards; /* Apply animation after a delay of 2 seconds */
+
+}
+
+
+.userChoiceRock, .userChoicePaper, .userChoiceScissors, .choiceBlank{
+    display: inline-flex;
+    align-items: center;
+}
+
+.pickCircle{
+    background-color: darkblue;
 }
 
 #resultBox{
     display: none;
     position: relative;
 }
+
+#userChoicePaper, #userChoiceRock{
+    display: none;
+}
+
+#compChoicePaper, #compChoiceRock, #compChoiceScissors{
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 
 
@@ -181,9 +287,9 @@ ul{
     .pickCircle{
         width: 25vw;
         height: 25vw;
-
         z-index: 99;
     }
+
 
 
 
@@ -230,14 +336,12 @@ ul{
     .displayRockIcon{
         width: 15vw;
         height: 15vw;
-        margin-left:3.5vw;
         margin-top:5vw;
     }
 
     .displayPaperIcon, .displayScissorsIcon{
         width: 15vw;
         height: 17vw;
-        margin-left:4.5vw;
         margin-top:5vw;
     }
 
@@ -260,11 +364,26 @@ ul{
         left:10vw;
         top:30vw;
     }
+    #userChoiceScissors, #userChoicePaper, #userChoiceRock{
+        flex-direction: column;
+    }
 
-    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
-        margin-top:12vw;
-        font-size: 4.5vw;
+
+    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
+        margin-top:6vw;
+        font-size: 3.25vw;
         text-align: center;
+    }
+
+    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
+        margin-top:6vw;
+        font-size: 3.25vw;
+        text-align: center;
+        
+    }
+
+    #compChoicePaper, #compChoiceRock, #compChoiceScissors{
+        margin-left:15vw;
     }
 
 
@@ -373,14 +492,12 @@ ul{
     .displayRockIcon{
         width: 14vw;
         height: 14vw;
-        margin-left:3.5vw;
         margin-top:5vw;
     }
 
     .displayPaperIcon, .displayScissorsIcon{
         width: 14vw;
         height: 15vw;
-        margin-left:4vw;
         margin-top:5vw;
     }
 
@@ -404,12 +521,27 @@ ul{
         top:30vw;
     }
 
-    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
-        margin-top:12vw;
-        font-size: 4.5vw;
+    #userChoiceScissors, #userChoicePaper, #userChoiceRock{
+        flex-direction: column;
+    }
+
+
+    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
+        margin-top:6vw;
+        font-size: 2.9vw;
         text-align: center;
     }
 
+    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
+        margin-top:6vw;
+        font-size: 2.9vw;
+        text-align: center;
+        
+    }
+
+    #compChoicePaper, #compChoiceRock, #compChoiceScissors{
+        margin-left:20vw;
+    }
 
 
     
@@ -518,14 +650,12 @@ ul{
     .displayRockIcon{
         width: 8vw;
         height: 8vw;
-        margin-left:3.5vw;
         margin-top:4vw;
     }
 
     .displayPaperIcon, .displayScissorsIcon{
         width: 8vw;
         height: 10vw;
-        margin-left:3vw;
         margin-top:3vw;
     }
 
@@ -544,16 +674,33 @@ ul{
 
     #resultBox{
         width: 31vw;
-        height: auto;
+        height: 40vw;
         left:10vw;
-        top:30vw;
+        top:20vw;
     }
 
-    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
-        margin-top:12vw;
-        font-size: 3vw;
+    #userChoiceScissors, #userChoicePaper, #userChoiceRock{
+        flex-direction: column;
+    }
+
+
+    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
+        margin-top:6vw;
+        font-size: 2.5vw;
         text-align: center;
     }
+
+    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
+        margin-top:6vw;
+        font-size: 2.5vw;
+        text-align: center;
+        
+    }
+
+    #compChoicePaper, #compChoiceRock, #compChoiceScissors{
+        margin-left:35vw;
+    }
+
 
 
     
@@ -671,7 +818,6 @@ ul{
     .displayRockIcon{
         width: 7.5vw;
         height: 7.5vw;
-        margin-left:3vw;
         margin-bottom:3vw;
     }
 
@@ -681,13 +827,10 @@ ul{
     }
 
     .displayScissorsIcon{
-        margin-left:4vw;
         margin-bottom:3vw;
     }
 
     .displayPaperIcon{
-
-        margin-left:3vw;
         margin-bottom:2vw;
     }
 
@@ -708,16 +851,35 @@ ul{
 
     #resultBox{
         width: 31vw;
-        height: auto;
+        height: 30vw;
         left:10vw;
         top:15vw;
     }
 
-    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
-        margin-bottom:8vw;
+    #userChoiceScissors, #userChoicePaper, #userChoiceRock{
+        flex-direction: column-reverse;
+    }
+
+
+    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
+        margin-bottom:6vw;
         font-size: 2.5vw;
         text-align: center;
     }
+
+    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
+        margin-bottom:6vw;
+        font-size: 2.5vw;
+        text-align: center;
+        
+    }
+
+    #compChoicePaper, #compChoiceRock, #compChoiceScissors{
+        margin-left:35vw;
+        flex-direction: column-reverse;
+    }
+    
+
 
 
     
@@ -835,7 +997,6 @@ ul{
     .displayRockIcon{
         width: 7.5vw;
         height: 7.5vw;
-        margin-left:3vw;
         margin-bottom:3vw;
     }
 
@@ -845,13 +1006,10 @@ ul{
     }
 
     .displayScissorsIcon{
-        margin-left:4vw;
         margin-bottom:3vw;
     }
 
     .displayPaperIcon{
-
-        margin-left:3vw;
         margin-bottom:2vw;
     }
 
@@ -872,16 +1030,33 @@ ul{
 
     #resultBox{
         width: 31vw;
-        height: auto;
+        height: 30vw;
         left:10vw;
-        top:15vw;
+        top:10vw;
     }
 
-    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
-        margin-bottom:8vw;
-        font-size: 2.5vw;
+    #userChoiceScissors, #userChoicePaper, #userChoiceRock{
+        flex-direction: column-reverse;
+    }
+
+
+    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
+        margin-bottom:4vw;
+        font-size: 2vw;
         text-align: center;
     }
+
+    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
+        margin-bottom:4vw;
+        font-size: 2vw;
+        text-align: center;
+        
+    }
+
+    #compChoicePaper, #compChoiceRock, #compChoiceScissors{
+        margin-left:40vw;
+    }
+    
     
 
 }
@@ -997,7 +1172,6 @@ ul{
     .displayRockIcon{
         width: 7.5vw;
         height: 7.5vw;
-        margin-left:3vw;
         margin-bottom:3vw;
     }
 
@@ -1007,13 +1181,11 @@ ul{
     }
 
     .displayScissorsIcon{
-        margin-left:4vw;
         margin-bottom:3vw;
     }
 
     .displayPaperIcon{
 
-        margin-left:3vw;
         margin-bottom:2vw;
     }
 
@@ -1034,17 +1206,33 @@ ul{
 
     #resultBox{
         width: 31vw;
-        height: auto;
+        height: 30vw;
         left:10vw;
-        top:15vw;
+        top:5vw;
     }
 
-    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
-        margin-bottom:8vw;
-        font-size: 2.5vw;
+    #userChoiceScissors, #userChoicePaper, #userChoiceRock{
+        flex-direction: column-reverse;
+    }
+
+
+    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
+        margin-bottom:4vw;
+        font-size: 2vw;
         text-align: center;
     }
 
+
+    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
+        margin-bottom:4vw;
+        font-size: 2vw;
+        text-align: center;
+        
+    }
+
+    #compChoicePaper, #compChoiceRock, #compChoiceScissors{
+        margin-left:40vw;
+    }
     
     
 
@@ -1160,7 +1348,6 @@ ul{
     .displayRockIcon{
         width: 7.5vw;
         height: 7.5vw;
-        margin-left:3vw;
         margin-bottom:3vw;
     }
 
@@ -1170,13 +1357,11 @@ ul{
     }
 
     .displayScissorsIcon{
-        margin-left:4vw;
         margin-bottom:3vw;
     }
 
     .displayPaperIcon{
 
-        margin-left:3vw;
         margin-bottom:2vw;
     }
 
@@ -1197,16 +1382,32 @@ ul{
 
     #resultBox{
         width: 31vw;
-        height: auto;
+        height: 20vw;
         left:10vw;
         bottom:15vw;
     }
 
-    .userChoiceScissors > p, .userChoiceRock > p, .userChoicePaper > p{
-        margin-bottom:6vw;
-        font-size: 2.5vw;
+    #userChoiceScissors, #userChoicePaper, #userChoiceRock{
+        flex-direction: column-reverse;
+    }
+
+    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
+        margin-bottom:2vw;
+        font-size: 1.75vw;        
         text-align: center;
     }
+
+    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
+        margin-bottom:2vw;
+        font-size: 1.75vw;
+        text-align: center;
+        
+    }
+
+    #compChoicePaper, #compChoiceRock, #compChoiceScissors{
+        margin-left:40vw;
+    }
+    
     
     
 
