@@ -240,7 +240,7 @@ ul{
 
 #rulesContainer{
     background-color: #ffff;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     z-index: 9;
@@ -505,7 +505,8 @@ ul{
     }
 
     #pickBox{
-        margin:40vw auto;
+        margin:30vw auto;
+        height: 60vw;
     }
 
     .triImg{
@@ -616,12 +617,12 @@ ul{
 
 
     #rulesBtnContainer > .rulesBtn{
-        padding: 4vw 12vw 4vw 12vw;
+        padding: 3vw 9vw 3vw 9vw;
         background-color: transparent;
         border:solid white 0.5vw;
-        border-radius: 4vw;
+        border-radius: 2vw;
         color:white;
-        font-size: 4vw;
+        font-size: 3vw;
         font-weight: 600;
     }
 
@@ -1012,10 +1013,10 @@ ul{
     #rulesContainer{
         text-align: left;
         color:hsl(229, 25%, 31%);
-        font-size: 2.5vw;
-        width: 45vw;
-        height: 38vw;
-        left:27vw;
+        font-size: 2vw;
+        width: 41vw;
+        height: 31vw;
+        left:28.8vw;
         top:20vw;
         border-radius: 2vw;
 
@@ -1029,19 +1030,19 @@ ul{
 
 
     .rulesImgContainer{
-        margin:0 auto;
+        margin:0 5vw;
     }
 
     .rulesImg{
-        width: 35vw;
+        width: 30vw;
         height: auto;
     }
 
     .closeBtn{
         width: 10vw;
-        margin-left: 36vw;
-        margin-top:-39vw;
-        font-size: 3vw;
+        margin-left: 32vw;
+        margin-top:-33vw;
+        font-size: 2.5vw;
     }
     
 
@@ -1438,11 +1439,11 @@ ul{
     #rulesContainer{
         text-align: left;
         color:hsl(229, 25%, 31%);
-        font-size: 2vw;
-        width: 40vw;
-        height: 30vw;
-        left:30vw;
-        top:20vw;
+        font-size: 1.5vw;
+        width: 30vw;
+        height: 20vw;
+        left:34.5vw;
+        top:15vw;
         border-radius: 2vw;
         padding-top:8vw;
 
@@ -1454,14 +1455,14 @@ ul{
     }
 
     .rulesImg{
-        width: 30vw;
+        width: 20vw;
         height: auto;
     }
 
     .closeBtn{
         width: 10vw;
-        margin-left: 30vw;
-        margin-top:-33vw;
+        margin-left: 22vw;
+        margin-top:-22vw;
         font-size: 2vw;
     }
     
