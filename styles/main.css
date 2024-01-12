@@ -236,6 +236,10 @@ ul{
 #rulesBtnContainer{
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom:10vw;
+    right: 0;
+    left:0;
 }
 
 #rulesContainer{
@@ -416,6 +420,12 @@ ul{
 
     #compChoicePaper, #compChoiceRock, #compChoiceScissors{
         margin-left:15vw;
+    }
+
+    #rulesBtnContainer{
+        bottom:5vw;
+        right: 0;
+        left:0;
     }
 
 
@@ -615,6 +625,14 @@ ul{
         margin-left:20vw;
     }
 
+    #rulesBtnContainer{
+        bottom:5vw;
+        right: 0;
+        left:0;
+        height: 10vw;
+        width: 100vw;
+    }
+
 
     #rulesBtnContainer > .rulesBtn{
         padding: 3vw 9vw 3vw 9vw;
@@ -808,6 +826,27 @@ ul{
     #compChoicePaper, #compChoiceRock, #compChoiceScissors{
         margin-left:35vw;
     }
+
+    #rulesBtnContainer{
+        bottom:5vw;
+        right: 0;
+        left:0;
+        height: 8vw;
+        width: 100vw;
+    }
+
+
+    #rulesBtnContainer > .rulesBtn{
+        padding: 0 6vw 0 6vw;
+        background-color: transparent;
+        border:solid white 0.5vw;
+        border-radius: 2vw;
+        color:white;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    
 
     #rulesContainer{
         padding-top: 10vw;
@@ -1009,6 +1048,26 @@ ul{
         margin-left:35vw;
         flex-direction: column-reverse;
     }
+
+    #rulesBtnContainer{
+        bottom:5vw;
+        right: 0;
+        left:0;
+        height: 6vw;
+        width: 100vw;
+    }
+
+
+    #rulesBtnContainer > .rulesBtn{
+        padding: 0 4vw 0 4vw;
+        background-color: transparent;
+        border:solid white 0.5vw;
+        border-radius: 2vw;
+        color:white;
+        font-size: 2vw;
+        font-weight: 600;
+    }
+
 
     #rulesContainer{
         text-align: left;
@@ -1234,6 +1293,25 @@ ul{
         border-radius: 2vw;
 
 
+    }
+
+    #rulesBtnContainer{
+        bottom:5vw;
+        right: 0;
+        left:0;
+        height: 5vw;
+        width: 100vw;
+    }
+
+
+    #rulesBtnContainer > .rulesBtn{
+        padding: 0 3vw 0 3vw;
+        background-color: transparent;
+        border:solid white 0.3vw;
+        border-radius: 1vw;
+        color:white;
+        font-size: 1.5vw;
+        font-weight: 600;
     }
 
     #rulesContainer > h2{
