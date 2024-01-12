@@ -9,6 +9,10 @@ body {
 }
 
 
+h2{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
 p,li{
     color:white;
     text-decoration: none;
@@ -104,6 +108,8 @@ ul{
     flex-direction: column;
     align-items: center;
 }
+
+
 
 @keyframes changeBackgroundRock { 
 
@@ -233,11 +239,21 @@ ul{
 }
 
 #rulesContainer{
-    width: 100%;
-    height: 100%;
     background-color: #ffff;
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 9;
 }
+
+.closeBtn {
+    background-color: transparent;
+    border: none;
+    color:  hsl(217, 16%, 45%);
+    cursor: pointer;
+  }
+  
+
 
 
 
@@ -415,9 +431,29 @@ ul{
     }
 
     #rulesContainer{
+        padding-top: 15vw;
         width: 100%;
         height: 100%;
+        text-align: center;
+        color:hsl(229, 25%, 31%);
+        font-size: 6vw;
 
+    }
+
+
+    .rulesImgContainer{
+        margin:30vw auto;
+    }
+
+    .rulesImg{
+        width: 75vw;
+        height: auto;
+    }
+
+    .closeBtn{
+        width: 10vw;
+        margin:0 auto;
+        font-size: 10vw;
     }
 
 
@@ -589,7 +625,33 @@ ul{
         font-weight: 600;
     }
 
-    
+    #rulesContainer{
+        padding-top: 15vw;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color:hsl(229, 25%, 31%);
+        font-size: 4vw;
+
+    }
+
+
+    .rulesImgContainer{
+        margin:20vw auto 20vw auto;
+    }
+
+    .rulesImg{
+        width: 55vw;
+        height: auto;
+    }
+
+    .closeBtn{
+        width: 10vw;
+        margin:0 auto;
+        font-size: 7.5vw;
+    }
+
+
 
 }
 @media only screen and (min-width: 600px) {
@@ -746,7 +808,30 @@ ul{
         margin-left:35vw;
     }
 
+    #rulesContainer{
+        padding-top: 10vw;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color:hsl(229, 25%, 31%);
+        font-size: 3vw;
 
+    }
+
+    .rulesImgContainer{
+        margin:15vw auto 18vw auto;
+    }
+
+    .rulesImg{
+        width: 45vw;
+        height: auto;
+    }
+
+    .closeBtn{
+        width: 10vw;
+        margin:0 auto;
+        font-size: 6vw;
+    }
 
     
 
@@ -922,6 +1007,41 @@ ul{
     #compChoicePaper, #compChoiceRock, #compChoiceScissors{
         margin-left:35vw;
         flex-direction: column-reverse;
+    }
+
+    #rulesContainer{
+        text-align: left;
+        color:hsl(229, 25%, 31%);
+        font-size: 2.5vw;
+        width: 45vw;
+        height: 38vw;
+        left:27vw;
+        top:20vw;
+        border-radius: 2vw;
+
+
+    }
+
+    #rulesContainer > h2{
+        margin-top:-6vw;
+        margin-left: 5vw;
+    }
+
+
+    .rulesImgContainer{
+        margin:0 auto;
+    }
+
+    .rulesImg{
+        width: 35vw;
+        height: auto;
+    }
+
+    .closeBtn{
+        width: 10vw;
+        margin-left: 36vw;
+        margin-top:-39vw;
+        font-size: 3vw;
     }
     
 
@@ -1101,6 +1221,42 @@ ul{
     #compChoicePaper, #compChoiceRock, #compChoiceScissors{
         margin-left:40vw;
     }
+
+    #rulesContainer{
+        text-align: left;
+        color:hsl(229, 25%, 31%);
+        font-size: 2vw;
+        width: 45vw;
+        height: 30vw;
+        left:27vw;
+        top:20vw;
+        border-radius: 2vw;
+
+
+    }
+
+    #rulesContainer > h2{
+        margin-top:-6vw;
+        margin-left: 5vw;
+    }
+
+
+    .rulesImgContainer{
+        margin:0 auto;
+    }
+
+    .rulesImg{
+        width: 30vw;
+        height: auto;
+    }
+
+    .closeBtn{
+        width: 10vw;
+        margin-left: 36vw;
+        margin-top:-33vw;
+        font-size: 2.5vw;
+    }
+    
     
     
 
@@ -1278,6 +1434,36 @@ ul{
     #compChoicePaper, #compChoiceRock, #compChoiceScissors{
         margin-left:40vw;
     }
+
+    #rulesContainer{
+        text-align: left;
+        color:hsl(229, 25%, 31%);
+        font-size: 2vw;
+        width: 40vw;
+        height: 30vw;
+        left:30vw;
+        top:20vw;
+        border-radius: 2vw;
+        padding-top:8vw;
+
+
+    }
+
+    #rulesContainer > h2, .rulesImgContainer{
+        margin-left: 5vw;
+    }
+
+    .rulesImg{
+        width: 30vw;
+        height: auto;
+    }
+
+    .closeBtn{
+        width: 10vw;
+        margin-left: 30vw;
+        margin-top:-33vw;
+        font-size: 2vw;
+    }
     
     
 
@@ -1453,6 +1639,36 @@ ul{
         margin-left:40vw;
     }
     
+    #rulesContainer{
+        text-align: left;
+        color:hsl(229, 25%, 31%);
+        font-size: 1vw;
+        width: 20vw;
+        height: 18vw;
+        left:39.5vw;
+        top:15vw;
+        border-radius: 2vw;
+        padding-top:2vw;
+
+
+    }
+
+    #rulesContainer > h2, .rulesImgContainer{
+        margin-top:0vw;
+        margin-left: 2vw;
+    }
+
+    .rulesImg{
+        width: 15vw;
+        height: auto;
+    }
+
+    .closeBtn{
+        width: 10vw;
+        margin-left: 13vw;
+        margin-top:-16.5vw;
+        font-size: 1.5vw;
+    }
     
     
 
