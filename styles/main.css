@@ -269,207 +269,193 @@ ul{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 375px) {
 
-    header{
-        padding-top:5vw;
-        width: 75vw;
-        margin:0 auto;
-        display: flex;
-        justify-content: center;
+    header {
+      padding-top: 5vw;
+      width: 75vw;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
     }
-    .header-content{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding:1vw 3vw 1vw 5vw;
-        border:solid white 0.5vw;
-        height: auto;
-        width: 100%;
+  
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1vw 3vw 1vw 5vw;
+      border: solid white 0.5vw;
+      height: auto;
+      width: 100%;
     }
-
-    .header-left > ul > li{
-        line-height: 4vw;
-        font-size: 4vw;
-        
+  
+    .header-left > ul > li {
+      line-height: 4vw;
+      font-size: 4vw;
     }
-
-    .score-box{
-        width: 15vw;
-        padding:1.5vw;
-
+  
+    .score-box {
+      width: 15vw;
+      padding: 1.5vw;
     }
-
-    .score-box > p{
-
-        font-size: 3vw;
-
+  
+    .score-box > p {
+      font-size: 3vw;
     }
-    
-    #score{
-        font-size: 9vw;
-        padding:0;
-        margin:0;
+  
+    #score {
+      font-size: 9vw;
+      padding: 0;
+      margin: 0;
     }
-
-    #pickBox{
-        margin:50vw auto;
-
+  
+    #pickBox {
+      margin: 50vw auto;
     }
-
-    .triImg{
-        width: 55vw;
-        z-index: 0;
+  
+    .triImg {
+      width: 55vw;
+      z-index: 0;
     }
-
-    .pickCircle{
-        width: 25vw;
-        height: 25vw;
-        z-index: 99;
+  
+    .pickCircle {
+      width: 25vw;
+      height: 25vw;
+      z-index: 99;
     }
-
-
-
-
-    #pickPaper{
-        border: double 3vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 60vw;
-        left: 10vw;
-        
+  
+    #pickPaper,
+    #pickScissors,
+    #pickRock {
+      border: double 3vw transparent;
+      margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
     }
-
-    #pickScissors{
-        border: double 3vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:60vw;
-        right: 10vw;
-
+  
+    #pickPaper {
+      bottom: 60vw;
+      left: 10vw;
     }
-
-    #pickRock{
-        border: double 3vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:25vw;
+  
+    #pickScissors {
+      bottom: 60vw;
+      right: 10vw;
     }
-
-    .circleContainer{
-        width: 100%;
+  
+    #pickRock {
+      bottom: 25vw;
     }
-
-    #pickBtn{
-
-        right: 2.5vw;
-        bottom:2.5vw;
-        width: 30vw;
-        height: 30vw;
+  
+    .circleContainer {
+      width: 100%;
     }
-
-    .pickIcon{
-        margin-right:1vw;
-        width: 12vw;
-        height: auto;
+  
+    #pickBtn {
+      right: 2.5vw;
+      bottom: 2.5vw;
+      width: 30vw;
+      height: 30vw;
     }
-
-    .displayRockIcon{
-        width: 15vw;
-        height: 15vw;
-        margin-top:5vw;
+  
+    .pickIcon {
+      margin-right: 1vw;
+      width: 12vw;
+      height: auto;
     }
-
-    .displayPaperIcon, .displayScissorsIcon{
-        width: 15vw;
-        height: 17vw;
-        margin-top:5vw;
+  
+    .displayRockIcon {
+      width: 15vw;
+      height: 15vw;
+      margin-top: 5vw;
     }
-
-    .userChoicePaper{
-        border: double 3vw transparent;
+  
+    .displayPaperIcon,
+    .displayScissorsIcon {
+      width: 15vw;
+      height: 17vw;
+      margin-top: 5vw;
     }
-
-    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
-        border: double 3vw transparent;
-        flex-direction: column;
+  
+    .userChoicePaper,
+    .userChoiceRock,
+    .userChoiceScissors {
+      border: double 3vw transparent;
+      flex-direction: column;
     }
-
-    .userChoiceScissors{
-        border: double 3vw transparent;
+  
+    .userChoiceScissors {
+      border: double 3vw transparent;
     }
-
-    #resultBox{
-        width: 31vw;
-        height: auto;
-        left:10vw;
-        top:30vw;
+  
+    #resultBox {
+      width: 31vw;
+      height: auto;
+      left: 10vw;
+      top: 30vw;
     }
-    #userChoiceScissors, #userChoicePaper, #userChoiceRock{
-        flex-direction: column;
+  
+    #userChoiceScissors,
+    #userChoicePaper,
+    #userChoiceRock {
+      flex-direction: column;
     }
-
-
-    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
-        margin-top:6vw;
-        font-size: 3.25vw;
-        text-align: center;
+  
+    #userChoiceScissors > p,
+    #userChoicePaper > p,
+    #userChoiceRock > p,
+    #compChoicePaper > p,
+    #compChoiceRock > p,
+    #compChoiceScissors > p {
+      margin-top: 6vw;
+      font-size: 3.25vw;
+      text-align: center;
     }
-
-    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
-        margin-top:6vw;
-        font-size: 3.25vw;
-        text-align: center;
-        
+  
+    #compChoicePaper,
+    #compChoiceRock,
+    #compChoiceScissors {
+      margin-left: 15vw;
     }
-
-    #compChoicePaper, #compChoiceRock, #compChoiceScissors{
-        margin-left:15vw;
+  
+    #rulesBtnContainer {
+      bottom: 5vw;
+      right: 0;
+      left: 0;
     }
-
-    #rulesBtnContainer{
-        bottom:5vw;
-        right: 0;
-        left:0;
+  
+    #rulesBtnContainer > .rulesBtn {
+      padding: 4vw 12vw 4vw 12vw;
+      background-color: transparent;
+      border: solid white 0.5vw;
+      border-radius: 4vw;
+      color: white;
+      font-size: 4vw;
+      font-weight: 600;
     }
-
-
-
-    #rulesBtnContainer > .rulesBtn{
-        padding: 4vw 12vw 4vw 12vw;
-        background-color: transparent;
-        border:solid white 0.5vw;
-        border-radius: 4vw;
-        color:white;
-        font-size: 4vw;
-        font-weight: 600;
+  
+    #rulesContainer {
+      padding-top: 15vw;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: hsl(229, 25%, 31%);
+      font-size: 6vw;
     }
-
-    #rulesContainer{
-        padding-top: 15vw;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        color:hsl(229, 25%, 31%);
-        font-size: 6vw;
-
+  
+    .rulesImgContainer {
+      margin: 30vw auto;
     }
-
-
-    .rulesImgContainer{
-        margin:30vw auto;
+  
+    .rulesImg {
+      width: 75vw;
+      height: auto;
     }
-
-    .rulesImg{
-        width: 75vw;
-        height: auto;
+  
+    .closeBtn {
+      width: 10vw;
+      margin: 0 auto;
+      font-size: 10vw;
     }
-
-    .closeBtn{
-        width: 10vw;
-        margin:0 auto;
-        font-size: 10vw;
-    }
-
-
-
-}
-
+  
+  }
+  
 
 @media only screen and (min-width: 375px) {
 
