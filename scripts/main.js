@@ -32,6 +32,15 @@ function userPicks(userNumber) {
     findWinner();
 }
 
+function showRules(){
+    let rules = document.getElementById("rulesContainer");
+    rules.style.display = ("flex");
+}
+
+function hideRules(){
+    let rules = document.getElementById("rulesContainer");
+    rules.style.display = ("none");
+}
 
 
 function showHideUserChoice(userChoice, hide){

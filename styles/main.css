@@ -59,7 +59,6 @@ ul{
 }
 
 .pickCircle{
-    position: relative;
     border-radius: 50%;
 }
 
@@ -69,12 +68,6 @@ ul{
 
 
 
-.circleContainer {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    z-index: 1;
-  }
 
 #pickPaper, #pickScissors, #pickRock , .userChoicePaper, .userChoiceRock, .userChoiceScissors{
     background-origin: border-box;
@@ -247,7 +240,7 @@ ul{
     display: none;
     flex-direction: column;
     position: fixed;
-    z-index: 9;
+    z-index: 999;
 }
 
 .closeBtn {
@@ -308,12 +301,18 @@ ul{
     }
   
     #pickBox {
-      margin: 50vw auto;
+      margin: 30vw auto;
+      flex-direction: row;
+      justify-content: center;
     }
   
     .triImg {
       width: 55vw;
       z-index: 0;
+      position: absolute;
+      left:0;
+      right:0;
+      margin:0 auto;
     }
   
     .pickCircle {
@@ -325,27 +324,25 @@ ul{
     #pickPaper,
     #pickScissors,
     #pickRock {
-      border: double 3vw transparent;
-      margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+      border: double 4vw transparent;
     }
   
     #pickPaper {
-      bottom: 60vw;
-      left: 10vw;
+        margin-bottom: 50vw;
+        margin-right: -10vw;
     }
   
     #pickScissors {
-      bottom: 60vw;
-      right: 10vw;
+        margin-bottom: 50vw;
+        margin-left: -10vw;
+
+
     }
   
     #pickRock {
-      bottom: 25vw;
+        margin-top:30vw;
     }
   
-    .circleContainer {
-      width: 100%;
-    }
   
     #pickBtn {
       right: 2.5vw;
@@ -500,46 +497,45 @@ ul{
         margin:0;
     }
 
-    #pickBox{
-        margin:30vw auto;
-        height: 60vw;
-    }
-
-    .triImg{
-        width: 55vw;
-    }
+    #pickBox {
+        margin: 20vw auto;
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+      .triImg {
+        width: 65vw;
+        z-index: 0;
+        position: absolute;
+        left:0;
+        right:0;
+        margin:0 auto;
+      }
 
     .pickCircle{
-        width: 22.5vw;
-        height: 22.5vw;
-
+        width: 24vw;
+        height: 24vw;
         z-index: 99;
     }
-
-    #pickPaper{
-        border: double 3vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 60vw;
-        left: 10vw;
-        
+    #pickPaper,
+    #pickScissors,
+    #pickRock {
+      border: double 4vw transparent;
+      margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
     }
-
-    #pickScissors{
-        border: double 3vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:60vw;
-        right: 10vw;
-
+  
+    #pickPaper {
+        margin-bottom: 50vw;
+        margin-right: -8vw;
     }
-
-    #pickRock{
-        border: double 3vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:25vw;
+  
+    #pickScissors {
+        margin-bottom: 50vw;
+        margin-left: -8vw;
     }
-
-    .circleContainer{
-        width: 100%;
+  
+    #pickRock {
+        margin-top:35vw;
     }
 
     #pickBtn{
@@ -551,7 +547,6 @@ ul{
     }
 
     .pickIcon{
-        margin-right:2.5vw;
         width: 10vw;
         height: auto;
     }
@@ -560,13 +555,13 @@ ul{
     .displayRockIcon{
         width: 14vw;
         height: 14vw;
-        margin-top:5vw;
+
     }
 
     .displayPaperIcon, .displayScissorsIcon{
         width: 14vw;
         height: 15vw;
-        margin-top:5vw;
+
     }
 
     .userChoicePaper{
@@ -702,45 +697,46 @@ ul{
         margin:0;
     }
 
-    #pickBox{
-        margin:30vw auto;
-    }
+    #pickBox {
+        margin: 15vw auto;
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+      .triImg {
+        width: 45vw;
+        z-index: 0;
+        position: absolute;
+        left:0;
+        right:0;
+        margin:0 auto;
+      }
 
-    .triImg{
-        width: 35vw;
-    }
 
     .pickCircle{
-        width: 15vw;
-        height: 15vw;
-
+        width: 18vw;
+        height: 18vw;
         z-index: 99;
     }
-
-    #pickPaper{
-        border: double 2vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 40vw;
-        left: 22.5vw;
-        
+    #pickPaper,
+    #pickScissors,
+    #pickRock {
+      border: double 3vw transparent;
+      margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
     }
-
-    #pickScissors{
-        border: double 2vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:40vw;
-        right: 22.5vw;
-
+  
+    #pickPaper {
+        margin-bottom: 35vw;
+        margin-left: 0.5vw
     }
-
-    #pickRock{
-        border: double 2vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:15vw;
+  
+    #pickScissors {
+        margin-bottom: 35vw;
+        margin-right: 0.5vw;
     }
-
-    .circleContainer{
-        width: 100%;
+  
+    #pickRock {
+        margin-top:30vw;
     }
 
     #pickBtn{
@@ -752,9 +748,9 @@ ul{
     }
 
     .pickIcon{
-        margin-right:1vw;
-        margin-top:2vw;
-        width: 7.5vw;
+        margin-left:2vw;
+        margin-top:3vw;
+        width: 8vw;
         height: auto;
     }
 
@@ -907,45 +903,51 @@ ul{
     }
 
     
-    #pickBox{
-        margin:15vw auto;
-    }
-
-    .triImg{
-        width: 30vw;
-    }
+    #pickBox {
+        margin: 10vw auto;
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+      .triImg {
+        width: 35vw;
+        z-index: 0;
+        position: absolute;
+        left:0;
+        right:0;
+        margin:0 auto;
+      }
 
     .pickCircle{
-        width: 13vw;
-        height: 13vw;
-
+        width: 15vw;
+        height: 15vw;
         z-index: 99;
     }
-
-    #pickPaper{
-        border: double 1.75vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 33vw;
-        left: 28vw;
-        
+    #pickPaper,
+    #pickScissors,
+    #pickRock {
+      border: double 2vw transparent;
+      margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
     }
+  
+    #pickPaper {
+        margin-bottom: 30vw;
+        margin-right: -5vw;
 
-    #pickScissors{
-        border: double 1.75vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 33vw;
-        right: 28vw;
 
     }
+  
+    #pickScissors {
+        margin-bottom: 30vw;
+        margin-left: -5vw;
 
-    #pickRock{
-        border: double 1.75vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:15vw;
+
     }
-
-    .circleContainer{
-        width: 100%;
+  
+    #pickRock {
+        margin-top:20vw;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     #pickBtn{
@@ -1140,13 +1142,20 @@ ul{
         margin:0;
     }
 
-    #pickBox{
-        margin:10vw auto;
-    }
-
-    .triImg{
-        width: 25vw;
-    }
+    #pickBox {
+        margin: 10vw auto;
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+      .triImg {
+        width: 30vw;
+        z-index: 0;
+        position: absolute;
+        left:0;
+        right:0;
+        margin:0 auto;
+      }
 
     .pickCircle{
         width: 11vw;
@@ -1154,31 +1163,23 @@ ul{
 
         z-index: 99;
     }
-
-    #pickPaper{
-        border: double 1.5vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 28vw;
-        left: 32vw;
-        
+    #pickPaper,
+    #pickScissors,
+    #pickRock {
+      border: double 2vw transparent;
     }
-
-    #pickScissors{
-        border: double 1.5vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 28vw;
-        right: 32vw;
+  
+    #pickPaper {
+        margin-bottom: 25vw;
 
     }
-
-    #pickRock{
-        border: double 1.5vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:12vw;
+  
+    #pickScissors {
+        margin-bottom: 25vw;
     }
-
-    .circleContainer{
-        width: 100%;
+  
+    #pickRock {
+        margin-top:18vw;
     }
 
     #pickBtn{
@@ -1191,8 +1192,9 @@ ul{
 
     .pickIcon{
         margin-bottom:2vw;
-        width: 4.5vw;
+        width: 5vw;
         height: auto;
+        margin-right: 2vw;
     }
 
 
@@ -1372,45 +1374,38 @@ ul{
 
 
     #pickBox{
-        margin:10vw auto;
+        margin:5vw auto;
     }
 
     .triImg{
-        width: 18vw;
+        width: 25vw;
     }
 
     .pickCircle{
         width: 10vw;
         height: 10vw;
-
         z-index: 99;
     }
 
-    #pickPaper{
-        border: double 1.25vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 22vw;
-        left: 33vw;
-        
+    #pickPaper,
+    #pickScissors,
+    #pickRock {
+      border: double 2vw transparent;
     }
-
-    #pickScissors{
-        border: double 1.25vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 22vw;
-        right: 33vw;
+  
+    #pickPaper {
+        margin-bottom: 20vw;
 
     }
-
-    #pickRock{
-        border: double 1.25vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:7.5vw;
+  
+    #pickScissors {
+        margin-bottom: 20vw;
+    }
+  
+    #pickRock {
+        margin-top:18vw;
     }
 
-    .circleContainer{
-        width: 100%;
-    }
 
     #pickBtn{
 
@@ -1529,12 +1524,242 @@ ul{
         margin-top:-22vw;
         font-size: 2vw;
     }
+
+    #rulesBtnContainer{
+        bottom:2vw;
+        right: 0;
+        left:0;
+        height: 4vw;
+        width: 100vw;
+    }
+
+
+    #rulesBtnContainer > .rulesBtn{
+        padding: 0 3vw 0 3vw;
+        background-color: transparent;
+        border:solid white 0.3vw;
+        border-radius: 1vw;
+        color:white;
+        font-size: 1.25vw;
+        font-weight: 600;
+    }
     
     
 
 }
 
 @media only screen and (min-width: 1366px) {
+
+    header{
+        padding-top:2vw;
+        width: 50vw;
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1vw 1.25vw 1vw 1.5vw;
+        border:solid white 0.1vw;
+        height: auto;
+        width: 100%;
+    }
+
+    .header-left > ul > li{
+        line-height: 1.5vw;
+        font-size: 1.5vw;
+        
+    }
+
+    .score-box{
+        width: 6vw;
+        padding:1.2vw;
+
+    }
+
+    .score-box > p{
+
+        font-size: 1vw;
+
+    }
+    
+    #score{
+        font-size: 2.5vw;
+        padding:0;
+        margin:0;
+    }
+
+    #pickBox {
+        margin: 5vw auto;
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+      .triImg {
+        width: 20vw;
+        z-index: 0;
+        position: absolute;
+        left:0;
+        right:0;
+        margin:0 auto;
+      }
+
+    .pickCircle{
+        width: 8vw;
+        height: 8vw;
+
+        z-index: 99;
+    }
+
+    #pickPaper,
+    #pickScissors,
+    #pickRock {
+      border: double 1.5vw transparent;
+    }
+  
+    #pickPaper {
+        margin-bottom: 17vw;
+        margin-right: -3vw;
+
+    }
+  
+    #pickScissors {
+        margin-bottom: 17vw;
+        margin-left: -3vw;
+    }
+  
+    #pickRock {
+        margin-top:15vw;
+    }
+
+    .circleContainer{
+        width: 100%;
+    }
+
+    #pickBtn{
+
+        right:1vw;
+        bottom:1vw;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .pickIcon{
+
+        width: 3.5vw;
+        height: auto;
+    }
+
+
+    #resultBox{
+        width: 31vw;
+        height: auto;
+        left:8vw;
+        top:10vw;
+    }
+
+
+    .displayRockIcon{
+        width: 7.5vw;
+        height: 7.5vw;
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon, .displayScissorsIcon{
+        width: 7.5vw;
+        height: 9vw;
+    }
+
+    .displayScissorsIcon{
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon{
+
+        margin-bottom:2vw;
+    }
+
+    .userChoicePaper{
+        border: double 3vw transparent;
+    }
+
+    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
+        border: double 3vw transparent;
+        flex-direction: column-reverse;
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .userChoiceScissors{
+        border: double 3vw transparent;
+    }
+
+    #resultBox{
+        width: 31vw;
+        height: 20vw;
+        left:10vw;
+        bottom:15vw;
+    }
+
+    #userChoiceScissors, #userChoicePaper, #userChoiceRock{
+        flex-direction: column-reverse;
+    }
+
+    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
+        margin-bottom:2vw;
+        font-size: 1.75vw;        
+        text-align: center;
+    }
+
+    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
+        margin-bottom:2vw;
+        font-size: 1.75vw;
+        text-align: center;
+        
+    }
+
+    #compChoicePaper, #compChoiceRock, #compChoiceScissors{
+        margin-left:40vw;
+    }
+    
+    #rulesContainer{
+        text-align: left;
+        color:hsl(229, 25%, 31%);
+        font-size: 1vw;
+        width: 20vw;
+        height: 18vw;
+        left:39.5vw;
+        top:15vw;
+        border-radius: 2vw;
+        padding-top:2vw;
+
+
+    }
+
+    #rulesContainer > h2, .rulesImgContainer{
+        margin-top:0vw;
+        margin-left: 2vw;
+    }
+
+    .rulesImg{
+        width: 15vw;
+        height: auto;
+    }
+
+    .closeBtn{
+        width: 10vw;
+        margin-left: 13vw;
+        margin-top:-16.5vw;
+        font-size: 1.5vw;
+    }
+    
+    
+
+}
+
+@media only screen and (min-width: 1600px) {
 
     header{
         padding-top:2vw;
