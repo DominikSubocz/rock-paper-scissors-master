@@ -9,8 +9,12 @@ body {
 }
 
 
-h2{
+h2, h1{
     font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+h1{
+    color:#ffff;
 }
 
 p,li{
@@ -46,11 +50,29 @@ ul{
 
 }
 
+#tieBox{
+    display: none;
+}
+
+#looseBox{
+    display: none;
+}
+
+#victoryBox{
+    display: none;
+}
+
 .score-box > p{
     color:hsl(229, 64%, 46%);
     padding:0;
     margin:0;
     font-weight: 800;
+}
+
+
+
+.outcomeBox > div > button{
+    color:hsl(229, 25%, 31%);
 }
 
 #score{
@@ -249,6 +271,10 @@ ul{
     color:  hsl(217, 16%, 45%);
     cursor: pointer;
   }
+
+  #displayChoicesBox{
+    display: flex;
+  }
   
 
 
@@ -382,10 +408,36 @@ ul{
     }
   
     #resultBox {
-      width: 31vw;
+      flex-direction: column;
+      width: 100vw;
       height: auto;
-      left: 10vw;
       top: 30vw;
+      align-items: center;
+    }
+
+    #displayChoicesBox{
+        flex-direction: row;
+    }
+
+    .outcomeBox{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin:0 auto;
+        width: 100vw;
+    }
+
+    .outcomeBox > div > h1{
+        font-size: 15vw;
+        font-weight: 800;
+    }
+
+    .outcomeBox > div > button{
+        font-size: 4vw;
+        padding:4vw 15vw;
+        font-weight: 600;
+        border-radius: 2vw;
+        border: none;
     }
   
     #userChoiceScissors,
@@ -450,6 +502,10 @@ ul{
       margin: 0 auto;
       font-size: 10vw;
     }
+
+
+
+
   
   }
   
@@ -577,12 +633,39 @@ ul{
         border: double 3vw transparent;
     }
 
-    #resultBox{
-        width: 31vw;
+    #resultBox {
+        flex-direction: column;
+        width: 100vw;
         height: auto;
-        left:10vw;
-        top:30vw;
-    }
+        top: 30vw;
+        align-items: center;
+      }
+  
+      #displayChoicesBox{
+          flex-direction: row;
+      }
+  
+      .outcomeBox{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin:0 auto;
+          width: 100vw;
+      }
+  
+      .outcomeBox > div > h1{
+          font-size: 13vw;
+          font-weight: 800;
+          margin-bottom:3vw;
+      }
+  
+      .outcomeBox > div > button{
+          font-size: 4vw;
+          padding:4vw 13vw;
+          font-weight: 600;
+          border-radius: 2vw;
+          border: none;
+      }
 
     #userChoiceScissors, #userChoicePaper, #userChoiceRock{
         flex-direction: column;
@@ -654,6 +737,236 @@ ul{
 
 
 }
+
+
+@media only screen and (min-width: 450px) {
+
+    header{
+        padding-top:5vw;
+        width: 75vw;
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0.5vw 3vw 0.5vw 5vw;
+        border:solid white 0.5vw;
+        height: auto;
+        width: 100%;
+    }
+
+    .header-left > ul > li{
+        line-height: 4vw;
+        font-size: 4vw;
+        
+    }
+
+    .score-box{
+        width: 15vw;
+        padding:1.2vw;
+
+    }
+
+    .score-box > p{
+
+        font-size: 2.25vw;
+
+    }
+    
+    #score{
+        font-size: 6vw;
+        padding:0;
+        margin:0;
+    }
+
+    #pickBox {
+        margin: 20vw auto;
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+      .triImg {
+        width: 65vw;
+        z-index: 0;
+        position: absolute;
+        left:0;
+        right:0;
+        margin:0 auto;
+      }
+
+    .pickCircle{
+        width: 22vw;
+        height: 22vw;
+        z-index: 99;
+    }
+    #pickPaper,
+    #pickScissors,
+    #pickRock {
+      border: double 4vw transparent;
+      margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+    }
+  
+    #pickPaper {
+        margin-bottom: 50vw;
+        margin-right: -8vw;
+    }
+  
+    #pickScissors {
+        margin-bottom: 50vw;
+        margin-left: -8vw;
+    }
+  
+    #pickRock {
+        margin-top:35vw;
+    }
+
+    #pickBtn{
+        right: 3.5vw;
+        bottom:3.5vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .pickIcon{
+        width: 10vw;
+        height: auto;
+    }
+
+
+    .displayRockIcon{
+        width: 11vw;
+        height: 11vw;
+        margin-top:5vw;
+    }
+
+    .displayPaperIcon, .displayScissorsIcon{
+        width: 11vw;
+        height: 12vw;
+        margin-top:5vw;
+
+    }
+
+    .userChoicePaper{
+        border: double 4vw transparent;
+    }
+
+    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
+        border: double 4vw transparent;
+        flex-direction: column;
+    }
+
+    .userChoiceScissors{
+        border: double 4vw transparent;
+    }
+
+    #resultBox {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        top: 20vw;
+        align-items: center;
+      }
+  
+      #displayChoicesBox{
+          flex-direction: row;
+      }
+  
+      .outcomeBox{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin:0 auto;
+          width: 100vw;
+      }
+  
+      .outcomeBox > div > h1{
+          font-size: 11vw;
+          font-weight: 800;
+          margin-bottom:3vw;
+      }
+  
+      .outcomeBox > div > button{
+          font-size: 2.75vw;
+          padding:3vw 13vw;
+          font-weight: 600;
+          border-radius: 2vw;
+          border: none;
+      }
+
+    #userChoiceScissors, #userChoicePaper, #userChoiceRock{
+        flex-direction: column;
+    }
+
+
+    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
+        margin-top:6vw;
+        font-size: 2.9vw;
+        text-align: center;
+    }
+
+    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
+        margin-top:6vw;
+        font-size: 2.9vw;
+        text-align: center;
+        
+    }
+
+    #compChoicePaper, #compChoiceRock, #compChoiceScissors{
+        margin-left:20vw;
+    }
+
+    #rulesBtnContainer{
+        bottom:5vw;
+        right: 0;
+        left:0;
+        height: 8vw;
+        width: 100vw;
+    }
+
+
+    #rulesBtnContainer > .rulesBtn{
+        padding: 1vw 9vw 1vw 9vw;
+        background-color: transparent;
+        border:solid white 0.5vw;
+        border-radius: 2vw;
+        color:white;
+        font-size: 3vw;
+        font-weight: 600;
+    }
+
+    #rulesContainer{
+        padding-top: 15vw;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color:hsl(229, 25%, 31%);
+        font-size: 3vw;
+
+    }
+
+
+    .rulesImgContainer{
+        margin:20vw auto 20vw auto;
+    }
+
+    .rulesImg{
+        width: 55vw;
+        height: auto;
+    }
+
+    .closeBtn{
+        width: 10vw;
+        margin:0 auto;
+        font-size: 7.5vw;
+    }
+
+
+
+}
+
 @media only screen and (min-width: 600px) {
 
     header{
@@ -704,7 +1017,7 @@ ul{
       }
     
       .triImg {
-        width: 45vw;
+        width: 40vw;
         z-index: 0;
         position: absolute;
         left:0;
@@ -714,29 +1027,28 @@ ul{
 
 
     .pickCircle{
-        width: 18vw;
-        height: 18vw;
+        width: 15vw;
+        height: 15vw;
         z-index: 99;
     }
     #pickPaper,
     #pickScissors,
     #pickRock {
-      border: double 3vw transparent;
-      margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+      border: double 2.5vw transparent;
     }
   
     #pickPaper {
-        margin-bottom: 35vw;
-        margin-left: 0.5vw
+        margin-bottom: 30vw;
+        margin-right: -5vw;
     }
   
     #pickScissors {
-        margin-bottom: 35vw;
-        margin-right: 0.5vw;
+        margin-bottom: 30vw;
+        margin-left: -5vw;
     }
   
     #pickRock {
-        margin-top:30vw;
+        margin-top:25vw;
     }
 
     #pickBtn{
@@ -748,22 +1060,21 @@ ul{
     }
 
     .pickIcon{
-        margin-left:2vw;
-        margin-top:3vw;
-        width: 8vw;
+        margin-top:1vw;
+        width: 7vw;
         height: auto;
     }
 
 
     .displayRockIcon{
-        width: 8vw;
-        height: 8vw;
+        width: 6vw;
+        height: 6vw;
         margin-top:4vw;
     }
 
     .displayPaperIcon, .displayScissorsIcon{
-        width: 8vw;
-        height: 10vw;
+        width: 7vw;
+        height: 8vw;
         margin-top:3vw;
     }
 
@@ -780,40 +1091,60 @@ ul{
         border: double 3vw transparent;
     }
 
-    #resultBox{
-        width: 31vw;
-        height: 40vw;
-        left:10vw;
-        top:20vw;
-    }
+    #resultBox {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        top: 15vw;
+        align-items: center;
+      }
+  
+      #displayChoicesBox{
+          flex-direction: row;
+      }
+  
+      .outcomeBox{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin:0 auto;
+          width: 100vw;
+      }
+  
+      .outcomeBox > div > h1{
+          font-size: 9vw;
+          font-weight: 800;
+          margin-bottom:3vw;
+      }
+  
+      .outcomeBox > div > button{
+          font-size: 2vw;
+          padding:2.25vw 10vw;
+          font-weight: 600;
+          border-radius: 2vw;
+          border: none;
+      }
 
     #userChoiceScissors, #userChoicePaper, #userChoiceRock{
         flex-direction: column;
     }
 
-
-    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
-        margin-top:6vw;
-        font-size: 2.5vw;
-        text-align: center;
-    }
-
-    #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
-        margin-top:6vw;
+    #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p , #compChoicePaper > p, #compChoiceRock > p, #compChoiceScissors > p{
+        margin-top:3vw;
         font-size: 2.5vw;
         text-align: center;
         
     }
 
     #compChoicePaper, #compChoiceRock, #compChoiceScissors{
-        margin-left:35vw;
+        margin-left:15vw;
     }
 
     #rulesBtnContainer{
         bottom:5vw;
         right: 0;
         left:0;
-        height: 8vw;
+        height: 7vw;
         width: 100vw;
     }
 
@@ -824,8 +1155,8 @@ ul{
         border:solid white 0.5vw;
         border-radius: 2vw;
         color:white;
-        font-size: 2.5vw;
-        font-weight: 600;
+        font-size: 2vw;
+        font-weight: 400;
     }
 
     
@@ -965,12 +1296,7 @@ ul{
 
 
 
-    #resultBox{
-        width: 31vw;
-        height: auto;
-        left:8vw;
-        top:15vw;
-    }
+
 
 
     .displayRockIcon{
@@ -1007,12 +1333,40 @@ ul{
         border: double 3vw transparent;
     }
 
-    #resultBox{
-        width: 31vw;
-        height: 30vw;
-        left:10vw;
-        top:15vw;
-    }
+    #resultBox {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        top: 15vw;
+        align-items: center;
+      }
+  
+      #displayChoicesBox{
+          flex-direction: row;
+      }
+  
+      .outcomeBox{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin-top: -30vw;
+          width: 100vw;
+      }
+  
+      .outcomeBox > div > h1{
+          font-size: 6vw;
+          font-weight: 800;
+          margin-bottom:3vw;
+      }
+  
+      .outcomeBox > div > button{
+          font-size: 2vw;
+          padding:2vw 7.5vw;
+          font-weight: 600;
+          border-radius: 1vw;
+          border: none;
+      }
+
 
     #userChoiceScissors, #userChoicePaper, #userChoiceRock{
         flex-direction: column-reverse;
@@ -1033,14 +1387,14 @@ ul{
     }
 
     #compChoicePaper, #compChoiceRock, #compChoiceScissors{
-        margin-left:35vw;
+        margin-left:45vw;
         flex-direction: column-reverse;
     }
 
     #rulesBtnContainer{
-        bottom:5vw;
+        bottom:2vw;
         right: 0;
-        left:0;
+        left:40vw;
         height: 6vw;
         width: 100vw;
     }
@@ -1099,7 +1453,7 @@ ul{
 
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 830px) {
 
     header{
         padding-top:2vw;
@@ -1199,14 +1553,6 @@ ul{
 
 
 
-    #resultBox{
-        width: 31vw;
-        height: auto;
-        left:8vw;
-        top:15vw;
-    }
-
-
     .displayRockIcon{
         width: 7.5vw;
         height: 7.5vw;
@@ -1241,13 +1587,39 @@ ul{
         border: double 3vw transparent;
     }
 
-    #resultBox{
-        width: 31vw;
-        height: 30vw;
-        left:10vw;
-        top:10vw;
-    }
-
+    #resultBox {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        top: 10vw;
+        align-items: center;
+      }
+  
+      #displayChoicesBox{
+          flex-direction: row;
+      }
+  
+      .outcomeBox{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin-top: -25vw;
+          width: 100vw;
+      }
+  
+      .outcomeBox > div > h1{
+          font-size: 5vw;
+          font-weight: 800;
+          margin-bottom:3vw;
+      }
+  
+      .outcomeBox > div > button{
+          font-size: 1.5vw;
+          padding:2vw 6.5vw;
+          font-weight: 600;
+          border-radius: 1vw;
+          border: none;
+      }
     #userChoiceScissors, #userChoicePaper, #userChoiceRock{
         flex-direction: column-reverse;
     }
@@ -1284,9 +1656,9 @@ ul{
     }
 
     #rulesBtnContainer{
-        bottom:5vw;
+        bottom:2vw;
         right: 0;
-        left:0;
+        left:40vw;
         height: 5vw;
         width: 100vw;
     }
@@ -1420,16 +1792,6 @@ ul{
         height: auto;
     }
 
-
-
-    #resultBox{
-        width: 31vw;
-        height: auto;
-        left:8vw;
-        top:15vw;
-    }
-
-
     .displayRockIcon{
         width: 7.5vw;
         height: 7.5vw;
@@ -1465,12 +1827,39 @@ ul{
         border: double 3vw transparent;
     }
 
-    #resultBox{
-        width: 31vw;
-        height: 30vw;
-        left:10vw;
-        top:5vw;
-    }
+    #resultBox {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        top: 5vw;
+        align-items: center;
+      }
+  
+      #displayChoicesBox{
+          flex-direction: row;
+      }
+  
+      .outcomeBox{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin-top: -25vw;
+          width: 100vw;
+      }
+  
+      .outcomeBox > div > h1{
+          font-size: 4vw;
+          font-weight: 800;
+          margin-bottom:3vw;
+      }
+  
+      .outcomeBox > div > button{
+          font-size: 1.5vw;
+          padding:1.5vw 6vw;
+          font-weight: 600;
+          border-radius: 1vw;
+          border: none;
+      }
 
     #userChoiceScissors, #userChoicePaper, #userChoiceRock{
         flex-direction: column-reverse;
@@ -1528,7 +1917,7 @@ ul{
     #rulesBtnContainer{
         bottom:2vw;
         right: 0;
-        left:0;
+        left:40vw;
         height: 4vw;
         width: 100vw;
     }
@@ -1647,19 +2036,11 @@ ul{
     }
 
     .pickIcon{
-
+        margin-left:2vw;
+        margin-top: 2vw;
         width: 3.5vw;
         height: auto;
     }
-
-
-    #resultBox{
-        width: 31vw;
-        height: auto;
-        left:8vw;
-        top:10vw;
-    }
-
 
     .displayRockIcon{
         width: 7.5vw;
@@ -1696,12 +2077,39 @@ ul{
         border: double 3vw transparent;
     }
 
-    #resultBox{
-        width: 31vw;
-        height: 20vw;
-        left:10vw;
-        bottom:15vw;
-    }
+    #resultBox {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        top: 5vw;
+        align-items: center;
+      }
+  
+      #displayChoicesBox{
+          flex-direction: row;
+      }
+  
+      .outcomeBox{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin-top: -25vw;
+          width: 100vw;
+      }
+  
+      .outcomeBox > div > h1{
+          font-size: 4vw;
+          font-weight: 800;
+          margin-bottom:2vw;
+      }
+  
+      .outcomeBox > div > button{
+          font-size: 1vw;
+          padding:1vw 5vw;
+          font-weight: 600;
+          border-radius: 0.5vw;
+          border: none;
+      }
 
     #userChoiceScissors, #userChoicePaper, #userChoiceRock{
         flex-direction: column-reverse;
@@ -1753,6 +2161,25 @@ ul{
         margin-left: 13vw;
         margin-top:-16.5vw;
         font-size: 1.5vw;
+    }
+
+    #rulesBtnContainer{
+        bottom:2vw;
+        right: 0;
+        left:40vw;
+        height: 3vw;
+        width: 100vw;
+    }
+
+
+    #rulesBtnContainer > .rulesBtn{
+        padding: 0 2vw 0 2vw;
+        background-color: transparent;
+        border:solid white 0.3vw;
+        border-radius: 1vw;
+        color:white;
+        font-size: 1vw;
+        font-weight: 600;
     }
     
     
@@ -1803,40 +2230,35 @@ ul{
     }
 
     #pickBox{
-        margin:8vw auto;
+        margin:0 auto;
     }
 
     .triImg{
-        width: 15vw;
+        width: 20vw;
     }
 
     .pickCircle{
         width: 8vw;
         height: 8vw;
-
         z-index: 99;
     }
 
     #pickPaper{
         border: double 1vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 18vw;
-        left: 37.5vw;
+        margin-bottom: 15vw; /* Adjusted margin for readability, change as needed */
         
     }
 
     #pickScissors{
         border: double 1vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom: 18vw;
-        right: 37.5vw;
+        margin-bottom: 15vw; /* Adjusted margin for readability, change as needed */
+        
 
     }
 
     #pickRock{
         border: double 1vw transparent;
         margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
-        bottom:7.5vw;
     }
 
     .circleContainer{
@@ -1857,28 +2279,51 @@ ul{
         height: auto;
     }
 
-
-    #resultBox{
-        width: 31vw;
+    #resultBox {
+        flex-direction: column;
+        width: 100vw;
         height: auto;
-        left:8vw;
-        top:10vw;
-    }
-
+        top: 2vw;
+        align-items: center;
+      }
+  
+      #displayChoicesBox{
+          flex-direction: row;
+      }
+  
+      .outcomeBox{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin-top: -15vw;
+          width: 100vw;
+      }
+  
+      .outcomeBox > div > h1{
+          font-size: 3vw;
+          font-weight: 800;
+          margin-bottom:2vw;
+      }
+  
+      .outcomeBox > div > button{
+          font-size: 0.75vw;
+          padding:1vw 4.5vw;
+          font-weight: 600;
+          border-radius: 0.5vw;
+          border: none;
+      }
 
     .displayRockIcon{
-        width: 7.5vw;
-        height: 7.5vw;
+        width: 5vw;
         margin-bottom:3vw;
     }
 
     .displayPaperIcon, .displayScissorsIcon{
-        width: 7.5vw;
-        height: 9vw;
+        width: 5vw;
     }
 
     .displayScissorsIcon{
-        margin-bottom:3vw;
+        margin-bottom:2vw;
     }
 
     .displayPaperIcon{
@@ -1886,27 +2331,14 @@ ul{
         margin-bottom:2vw;
     }
 
-    .userChoicePaper{
-        border: double 3vw transparent;
-    }
 
     .userChoiceRock, .userChoicePaper, .userChoiceScissors{
-        border: double 3vw transparent;
+        border: double 1.5vw transparent;
         flex-direction: column-reverse;
-        width: 15vw;
-        height: 15vw;
+        width: 10vw;
+        height: 10vw;
     }
 
-    .userChoiceScissors{
-        border: double 3vw transparent;
-    }
-
-    #resultBox{
-        width: 31vw;
-        height: 20vw;
-        left:10vw;
-        bottom:15vw;
-    }
 
     #userChoiceScissors, #userChoicePaper, #userChoiceRock{
         flex-direction: column-reverse;
@@ -1914,7 +2346,7 @@ ul{
 
     #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
         margin-bottom:2vw;
-        font-size: 1.75vw;        
+        font-size: 1.5vw;        
         text-align: center;
     }
 
@@ -1958,6 +2390,25 @@ ul{
         margin-left: 13vw;
         margin-top:-16.5vw;
         font-size: 1.5vw;
+    }
+
+    #rulesBtnContainer{
+        bottom:2vw;
+        right: 0;
+        left:40vw;
+        height: 3vw;
+        width: 100vw;
+    }
+
+
+    #rulesBtnContainer > .rulesBtn{
+        padding: 0 2vw 0 2vw;
+        background-color: transparent;
+        border:solid white 0.3vw;
+        border-radius: 1vw;
+        color:white;
+        font-size: 1vw;
+        font-weight: 600;
     }
     
     

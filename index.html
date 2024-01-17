@@ -58,48 +58,64 @@
     </div>
 
     <div id="resultBox">
-      <div id="userChoicePaper">
-        <div class="pickCircle userChoicePaper">
-          <img class="displayPaperIcon" src="/images/icon-paper.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
+      <div id="displayChoicesBox">
+        <div id="userChoicePaper">
+          <div class="pickCircle userChoicePaper">
+            <img class="displayPaperIcon" src="/images/icon-paper.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
+          </div>
+          <p>YOU PICKED</p>
         </div>
-        <p>YOU PICKED</p>
+        <div id="userChoiceRock">
+          <div class="pickCircle userChoiceRock">
+            <img class="displayRockIcon" src="/images/icon-rock.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
+          </div>
+          <p>YOU PICKED</p>
+        </div>
+        <div id="userChoiceScissors">
+          <div class="pickCircle userChoiceScissors">
+            <img class="displayScissorsIcon" src="/images/icon-scissors.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
+          </div>
+          <p>YOU PICKED</p>
+        </div>
+        <div id="compChoicePaper">
+          <div class="compChoicePaper pickCircle userChoicePaper">
+            <img class="displayPaperIcon" src="/images/icon-paper.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
+          </div>
+          <p>THE HOUSE PICKED</p>
+        </div>
+        <div id="compChoiceRock">
+          <div class="compChoiceRock pickCircle userChoiceRock">
+            <img class="displayRockIcon" src="/images/icon-rock.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
+          </div>
+          <p clas="test">THE HOUSE PICKED</p>
+        </div>
+        <div id="compChoiceScissors">
+          <div class="compChoiceScissors pickCircle userChoiceScissors">
+            <img class="displayScissorsIcon" src="/images/icon-scissors.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
+          </div>
+          <p>THE HOUSE PICKED</p>
+        </div>
       </div>
 
-      <div id="userChoiceRock">
-        <div class="pickCircle userChoiceRock">
-          <img class="displayRockIcon" src="/images/icon-rock.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
-
+      <div id="victoryBox" class="outcomeBox">
+        <div>
+          <h1> YOU WIN </h1>
+          <button id="playAgainBtn" onclick="playAgain()"> PLAY AGAIN </button>
         </div>
-        <p>YOU PICKED</p>
       </div>
 
-      <div id="userChoiceScissors">
-        <div class="pickCircle userChoiceScissors">
-          <img class="displayScissorsIcon" src="/images/icon-scissors.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
-
+      <div id="looseBox" class="outcomeBox">
+        <div>
+          <h1> YOU LOSE </h1>
+          <button id="playAgainBtn" onclick="playAgain()"> PLAY AGAIN </button>
         </div>
-        <p>YOU PICKED</p>
       </div>
 
-      <div id="compChoicePaper">
-        <div class="compChoicePaper pickCircle userChoicePaper">
-          <img class="displayPaperIcon" src="/images/icon-paper.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
+      <div id="tieBox" class="outcomeBox">
+        <div>
+          <h1> IT'S A TIE</h1>
+          <button id="playAgainBtn" onclick="playAgain()"> PLAY AGAIN </button>
         </div>
-        <p>THE HOUSE PICKED</p>
-      </div>
-
-      <div id="compChoiceRock">
-        <div class="compChoiceRock pickCircle userChoiceRock">
-          <img class="displayRockIcon" src="/images/icon-rock.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
-        </div>
-        <p clas="test">THE HOUSE PICKED</p>
-      </div>
-
-      <div id="compChoiceScissors">
-        <div class="compChoiceScissors pickCircle userChoiceScissors">
-          <img class="displayScissorsIcon" src="/images/icon-scissors.svg" alt="Icon of black hand showing paper move for rock paper scissors game.">
-        </div>
-        <p>THE HOUSE PICKED</p>
       </div>
       
     </div>

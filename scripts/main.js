@@ -1,11 +1,9 @@
 let userChoice = "";
-var delayInMilliseconds = 1000; //1 seconds
+let score = 0;
 
-
-
-
-
-
+//1 - Paper
+//2 - Rock
+//3- Scissors
 
 function clickPaper() {
     userPicks(1);
@@ -19,35 +17,23 @@ function clickScissors() {
     userPicks(3);
 }
 
-// 1 = paper
-// 2 = rock
-// 3 = scissors
-
 function userPicks(userNumber) {
-
-    
     userChoice = userNumber;
-
-    showHideUserChoice(userChoice, false)
+    showHideUserChoice(userChoice, false);
     findWinner();
 }
 
-function showRules(){
-    let rules = document.getElementById("rulesContainer");
-    rules.style.display = ("flex");
+function showRules() {
+    document.getElementById("rulesContainer").style.display = "flex";
 }
 
-function hideRules(){
-    let rules = document.getElementById("rulesContainer");
-    rules.style.display = ("none");
+function hideRules() {
+    document.getElementById("rulesContainer").style.display = "none";
 }
 
-
-function showHideUserChoice(userChoice, hide){
-
+function showHideUserChoice(userChoice, hide) {
     let pickBox = document.getElementById("pickBox");
-    let Box = document.getElementById("resultBox");
-
+    let resultBox = document.getElementById("resultBox");
     let paperBox = document.getElementById("userChoicePaper");
     let rockBox = document.getElementById("userChoiceRock");
     let scissorsBox = document.getElementById("userChoiceScissors");
@@ -56,121 +42,104 @@ function showHideUserChoice(userChoice, hide){
     let compRockBox = document.getElementById("compChoiceRock");
     let compScissorsBox = document.getElementById("compChoiceScissors");
 
+    [compPaperBox, compRockBox, compScissorsBox].forEach(box => box.style.display = "none");
 
-    compPaperBox.style.display = "none";
-    compRockBox.style.display= "none";
-    compScissorsBox.style.display= "none";
-
-
-    // checkUserChoice();
-
-    if( hide == false )
-    {
+    if (!hide) {
         pickBox.style.display = "none";
-        Box.style.display="flex";
+        resultBox.style.display = "flex";
 
-        if (userChoice == 1){
+        if (userChoice === 1) {
             paperBox.style.display = "flex";
-            rockBox.style.display= "none";
-            scissorsBox.style.display= "none";
-
-        }
-    
-        else if (userChoice == 2){
+            rockBox.style.display = "none";
+            scissorsBox.style.display = "none";
+        } else if (userChoice === 2) {
             rockBox.style.display = "flex";
-            scissorsBox.style.display= "none";
+            scissorsBox.style.display = "none";
             paperBox.style.display = "none";
-
-        }
-    
-        else{
+        } else {
             scissorsBox.style.display = "flex";
             paperBox.style.display = "none";
-            rockBox.style.display= "none";
-
+            rockBox.style.display = "none";
         }
-    }   
-
-    else{
+    } else {
         pickBox.style.display = "flex";
-        Box.style.display="none";
+        resultBox.style.display = "none";
     }
-
-
-
-
-}
-
-// For debuging purposes
-function checkUserChoice() {
-    console.log("User's choice is: " + userChoice);
 }
 
 function generateComputerMove() {
-    const randomDecimal = Math.random();
-    const randomNumber = Math.floor(randomDecimal * 3) + 1;
-
-
-
-    return randomNumber;
+    return Math.floor(Math.random() * 3) + 1;
 }
 
-const computerChoice = generateComputerMove();
+let computerChoice = generateComputerMove();
 console.log(computerChoice);
 
 function findWinner() {
-    let result = compareMoves(userChoice, computerChoice);
-    console.log(result);
 
+    compareMoves(userChoice, computerChoice);
     let compPaperBox = document.getElementById("compChoicePaper");
     let compRockBox = document.getElementById("compChoiceRock");
     let compScissorsBox = document.getElementById("compChoiceScissors");
 
-    if (computerChoice === 1){
+    [compPaperBox, compRockBox, compScissorsBox].forEach(box => box.style.display = "none");
+
+    if (computerChoice === 1) {
         compPaperBox.style.display = "flex";
-        compRockBox.style.display= "none";
-        compScissorsBox.style.display= "none";
-    }
-
-    else if (computerChoice === 2){
+    } else if (computerChoice === 2) {
         compRockBox.style.display = "flex";
-        compScissorsBox.style.display= "none";
-        compPaperBox.style.display = "none";
-    }
-
-    else{
+    } else if (computerChoice === 3) {
         compScissorsBox.style.display = "flex";
-        compPaperBox.style.display = "none";
-        compRockBox.style.display= "none";
     }
 }
 
-// 1 = paper
-// 2 = rock
-// 3 = scissors
+function showOutcome(number) {
+    let outcomeWin = document.getElementById("victoryBox");
+    let outcomeFail = document.getElementById("looseBox");
+    let outcomeTie = document.getElementById("tieBox");
+    let scoreBox = document.getElementById("score");
+
+    outcomeWin.style.display = "none";
+    outcomeFail.style.display = "none";
+    outcomeTie.style.display = "none";
+
+    if (number === 0) {
+        outcomeFail.style.display = "flex";
+        if (score > 0) score -= 1;
+    } else if (number === 1) {
+        outcomeWin.style.display = "flex";
+        score += 1;
+    } else if (number === 2) {
+        outcomeTie.style.display = "flex";
+    }
+
+    scoreBox.textContent = score;
+}
 
 function compareMoves(userChoice, computerChoice) {
-    
-    let scoreBox = document.getElementById("score");
     if (userChoice === computerChoice) {
+        setTimeout(showOutcome, 2000, 2);
         return "It's a tie!";
     } else if (
         (userChoice === 3 && computerChoice === 1) ||
         (userChoice === 1 && computerChoice === 2) ||
         (userChoice === 2 && computerChoice === 3)
     ) {
-        scoreBox.textContent = +1;
+        setTimeout(showOutcome, 2000, 1);
         return "You win!";
     } else {
-        if (scoreBox > 0){
-            scoreBox.textContent = -1;
-        }
-
-        else{
-            scoreBox.textContent = 0;
-        }
+        setTimeout(showOutcome, 2000, 0);
         return "Computer wins!";
     }
+}
 
+function playAgain() {
+    showOutcome(3);
+    let pickBox = document.getElementById("pickBox");
+    let resultBox = document.getElementById("resultBox");
 
+    computerChoice = generateComputerMove();
+    console.log(computerChoice);
+
+    pickBox.style.display = "flex";
+    resultBox.style.display = "none";
 }
