@@ -17,6 +17,14 @@ function clickScissors() {
     userPicks(3);
 }
 
+function clickSpock() {
+    userPicks(4);
+}
+
+function clickLizzard() {
+    userPicks(4);
+}
+
 function userPicks(userNumber) {
     userChoice = userNumber;
     showHideUserChoice(userChoice, false);

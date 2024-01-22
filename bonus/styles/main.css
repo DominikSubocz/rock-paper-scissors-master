@@ -285,6 +285,11 @@ ul{
   #displayChoicesBox{
     display: flex;
   }
+
+  .pickcontainer{
+    display: flex;
+
+  }
   
 
 
@@ -364,35 +369,36 @@ ul{
     #pickLizzard {
       border: double 3.5vw transparent;
     }
-    
-  
-    #pickPaper {
-        margin-bottom: 10vw;
-    }
-  
-    #pickScissors {
-        margin-bottom: 60vw;
-        margin-left: 3vw;
 
-
-    }
-  
-    #pickRock {
-        margin-top: 70vw;
-        margin-right:-15vw;
-        margin-left: 3vw;
+    #pickPaper{
+        margin-left:-15vw;
+        margin-bottom:20vw;
     }
 
-    #pickSpock {
-        margin-bottom: 10vw;
+    #pickSpock{
+        margin-right: -15vw;
+        margin-bottom:20vw;
+    }
+
+    #pickLizzard, #pickRock{
+        margin-top:65vw;
     }
 
     #pickLizzard{
-        margin-left:-45vw;
-        margin-top: 70vw;
-        margin-right: 3vw;
-
+        margin-right: -5vw;
     }
+
+    #pickRock{
+        margin-left: -5vw;
+    }
+
+    #pickScissors{
+        margin-bottom:65vw;
+    }
+    
+
+    
+  
   
   
     #pickBtn {
@@ -608,36 +614,30 @@ ul{
       margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
     }
   
-    #pickPaper {
-        margin-bottom: 10vw;
-        margin-right: -1vw;
-        margin-left: 1vw;
-    }
-  
-    #pickScissors {
-        margin-bottom: 60vw;
-
-
-
-    }
-  
-    #pickRock {
-        margin-top: 70vw;
-        margin-right:-15vw;
-        margin-left: 3vw;
+    #pickPaper{
+        margin-left:-15vw;
+        margin-bottom:20vw;
     }
 
-    #pickSpock {
-        margin-bottom: 10vw;
-        margin-left: -1vw;
-        margin-right: 2vw;
+    #pickSpock{
+        margin-right: -15vw;
+        margin-bottom:20vw;
+    }
+
+    #pickLizzard, #pickRock{
+        margin-top:65vw;
     }
 
     #pickLizzard{
-        margin-left:-40vw;
-        margin-top: 70vw;
-        margin-right: 3vw;
+        margin-right: -5vw;
+    }
 
+    #pickRock{
+        margin-left: -5vw;
+    }
+
+    #pickScissors{
+        margin-bottom:65vw;
     }
   
 
@@ -861,36 +861,33 @@ ul{
       border: double 3vw transparent;
       margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
     }
-  
-    #pickPaper {
-        margin-bottom: 10vw;
-        margin-right: -1vw;
-        margin-left: 6vw;
-    }
-  
-    #pickScissors {
-        margin-bottom: 50vw;
-        margin-left:2vw
-    }
-  
-    #pickRock {
-        margin-top: 60vw;
-        margin-right:-15vw;
-        margin-left: 6vw;
+
+    #pickPaper{
+        margin-left:-10vw;
+        margin-bottom:15vw;
     }
 
-    #pickSpock {
-        margin-bottom: 10vw;
-        margin-left: -1vw;
-        margin-right: 6vw;
+    #pickSpock{
+        margin-right: -10vw;
+        margin-bottom:15vw;
+    }
+
+    #pickLizzard, #pickRock{
+        margin-top:65vw;
     }
 
     #pickLizzard{
-        margin-left:-40vw;
-        margin-top: 60vw;
-        margin-right: 6vw;
-
+        margin-right: -5vw;
     }
+
+    #pickRock{
+        margin-left: -5vw;
+    }
+
+    #pickScissors{
+        margin-bottom:55vw;
+    }
+  
   
 
     #pickBtn{
@@ -1089,7 +1086,7 @@ ul{
       }
     
       .pentImg {
-        width: 50vw;
+        width: 55vw;
         z-index: 0;
         position: absolute;
         left:0;
@@ -1110,34 +1107,31 @@ ul{
     #pickLizzard {
       border: double 2.5vw transparent;
     }
-  
-    #pickPaper {
-        margin-bottom: 10vw;
 
-    }
-  
-    #pickScissors {
-        margin-bottom: 40vw;
-        margin-left: -2vw;
-    }
-  
-    #pickRock {
-        margin-top: 50vw;
-        margin-right:-15vw;
-        margin-left: 6vw;
+    #pickPaper{
+        margin-left:-10vw;
+        margin-bottom:10vw;
     }
 
-    #pickSpock {
-        margin-bottom: 10vw;
-        margin-left: 2vw;
+    #pickSpock{
+        margin-right: -10vw;
+        margin-bottom:10vw;
+    }
 
+    #pickLizzard, #pickRock{
+        margin-top:55vw;
     }
 
     #pickLizzard{
-        margin-left:-35vw;
-        margin-top: 50vw;
-        margin-right: 1vw;
+        margin-right: -5vw;
+    }
 
+    #pickRock{
+        margin-left: -5vw;
+    }
+
+    #pickScissors{
+        margin-bottom:45vw;
     }
 
     #pickBtn{
@@ -1331,7 +1325,7 @@ ul{
       }
     
       .pentImg {
-        width: 45vw;
+        width: 50vw;
         z-index: 0;
         position: absolute;
         left:0;
@@ -1352,36 +1346,33 @@ ul{
       border: double 2vw transparent;
       margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
     }
-  
-    #pickPaper {
-        margin-bottom: 10vw;
-        margin-right: 1vw;
 
-    }
-  
-    #pickScissors {
-        margin-bottom: 40vw;
-        margin-right: -2vw;
-    }
-  
-    #pickRock {
-        margin-top: 50vw;
-        margin-right:-15vw;
-        margin-left: 6vw;
+    #pickPaper{
+        margin-left:-5vw;
+        margin-bottom:10vw;
     }
 
-    #pickSpock {
-        margin-bottom: 10vw;
-        margin-left: 1vw;
+    #pickSpock{
+        margin-right: -5vw;
+        margin-bottom:10vw;
+    }
 
+    #pickLizzard, #pickRock{
+        margin-top:50vw;
     }
 
     #pickLizzard{
-        margin-left:-26vw;
-        margin-top: 50vw;
-        margin-right: 1vw;
-
+        margin-right: -5vw;
     }
+
+    #pickRock{
+        margin-left: -5vw;
+    }
+
+    #pickScissors{
+        margin-bottom:40vw;
+    }
+
 
     #pickBtn{
 
@@ -1628,36 +1619,33 @@ ul{
     #pickLizzard {
       border: double 2vw transparent;
     }
-  
-    #pickPaper {
-        margin-bottom: 7vw;
-        margin-right: 2vw;
 
-    }
-  
-    #pickScissors {
-        margin-bottom: 35vw;
-        margin-right: -2vw;
-    }
-  
-    #pickRock {
-        margin-top: 40vw;
-        margin-right:-15vw;
-        margin-left: 6vw;
+    #pickPaper{
+        margin-left:-7.5vw;
+        margin-bottom:10vw;
     }
 
-    #pickSpock {
-        margin-bottom: 7vw;
-        margin-left: 1vw;
+    #pickSpock{
+        margin-right: -7.5vw;
+        margin-bottom:10vw;
+    }
 
+    #pickLizzard, #pickRock{
+        margin-top:40vw;
     }
 
     #pickLizzard{
-        margin-left:-24vw;
-        margin-top: 40vw;
-        margin-right: 1vw;
-
+        margin-right: -5vw;
     }
+
+    #pickRock{
+        margin-left: -5vw;
+    }
+
+    #pickScissors{
+        margin-bottom:30vw;
+    }
+  
 
     #pickBtn{
 
@@ -1889,43 +1877,36 @@ ul{
     #pickLizzard {
       border: double 1.5vw transparent;
     }
-  
-    #pickPaper {
-        margin-bottom: 7vw;
-        margin-left: 8vw;
 
-
-    }
-  
-    #pickScissors {
-        margin-bottom: 30vw;
-        margin-right:13vw;
-        margin-left: -5vw;
-    }
-  
-    #pickRock {
-        margin-top: 35vw;
-        margin-right:-14vw;
-        margin-left: 6vw;
+    #pickPaper{
+        margin-left:-4vw;
+        margin-bottom:10vw;
     }
 
-    #pickSpock {
-        margin-bottom: 7vw;
-        margin-right: 10vw;
+    #pickSpock{
+        margin-right: -4vw;
+        margin-bottom:10vw;
+    }
 
+    #pickLizzard, #pickRock{
+        margin-top:35vw;
     }
 
     #pickLizzard{
-        margin-left:-34vw;
-        margin-top: 35vw;
-        margin-right: 2vw;
+        margin-right: -3vw;
 
     }
 
+    #pickRock{
+        margin-left: -3vw;
+
+    }
+
+    #pickScissors{
+        margin-bottom:30vw;
+    }
 
     #pickBtn{
-
-
         width: 13vw;
         height: 13vw;
     }
@@ -2132,7 +2113,7 @@ ul{
       }
     
       .pentImg {
-        width: 25vw;
+        width: 30vw;
         z-index: 0;
         position: absolute;
         left:0;
@@ -2155,37 +2136,32 @@ ul{
       border: double 1.2vw transparent;
     }
   
-    #pickPaper {
-        margin-bottom: 7vw;
-
-
-
-    }
-  
-    #pickScissors {
-        margin-bottom: 20vw;
-        margin-left: -6vw;
-    }
-  
-    #pickRock {
-        margin-top: 25vw;
-
+    #pickPaper{
+        margin-left:-4vw;
+        margin-bottom:6vw;
     }
 
-    #pickSpock {
-        margin-bottom: 7vw;
+    #pickSpock{
+        margin-right: -4vw;
+        margin-bottom:6vw;
+    }
 
-        
-        
-        
-
+    #pickLizzard, #pickRock{
+        margin-top:30vw;
     }
 
     #pickLizzard{
+        margin-right: -3vw;
 
-        margin-top: 25vw;
+    }
 
+    #pickRock{
+        margin-left: -3vw;
 
+    }
+
+    #pickScissors{
+        margin-bottom:25vw;
     }
 
     .circleContainer{
@@ -2395,13 +2371,13 @@ ul{
     }
 
     #pickBox {
-        margin: 5vw auto;
+        margin: 0 auto;
         flex-direction: row;
         justify-content: center;
       }
     
       .pentImg {
-        width: 20vw;
+        width: 22vw;
         z-index: 0;
         position: absolute;
         left:0;
@@ -2410,8 +2386,8 @@ ul{
       }
 
     .pickCircle{
-        width: 8vw;
-        height: 8vw;
+        width: 6vw;
+        height: 6vw;
 
         z-index: 99;
     }
@@ -2421,22 +2397,35 @@ ul{
     #pickRock,
     #pickSpock,
     #pickLizzard {
-      border: double 1.5vw transparent;
+      border: double 1vw transparent;
     }
-  
-    #pickPaper {
-        margin-bottom: 17vw;
+
+    #pickPaper{
+        margin-left:-4vw;
+        margin-bottom:6vw;
+    }
+
+    #pickSpock{
+        margin-right: -4vw;
+        margin-bottom:6vw;
+    }
+
+    #pickLizzard, #pickRock{
+        margin-top:25vw;
+    }
+
+    #pickLizzard{
         margin-right: -3vw;
 
     }
-  
-    #pickScissors {
-        margin-bottom: 17vw;
+
+    #pickRock{
         margin-left: -3vw;
+
     }
-  
-    #pickRock {
-        margin-top:15vw;
+
+    #pickScissors{
+        margin-bottom:18vw;
     }
 
     .circleContainer{
@@ -2452,9 +2441,9 @@ ul{
     }
 
     .pickIcon{
-        margin-left:2vw;
-        margin-top: 2vw;
-        width: 3.5vw;
+        margin-left:2.5vw;
+        margin-top: 2.5vw;
+        width: 2.5vw;
         height: auto;
     }
 
@@ -2601,6 +2590,5 @@ ul{
     
 
 }
-
 
 
