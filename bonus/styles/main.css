@@ -91,7 +91,7 @@ ul{
 
 
 
-#pickPaper, #pickScissors, #pickRock , .userChoicePaper, .userChoiceRock, .userChoiceScissors{
+#pickPaper, #pickScissors, #pickRock, #pickSpock ,#pickLizzard , .userChoicePaper, .userChoiceRock, .userChoiceScissors{
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
@@ -109,6 +109,16 @@ ul{
 #pickRock{
     background-image: linear-gradient(white, white), linear-gradient(to right, hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
     
+}
+
+#pickSpock{
+    background-image: linear-gradient(white, white), linear-gradient(to right, hsl(170, 100%, 50%) , hsl(170, 96%, 51%));
+    
+}
+
+#pickLizzard{
+    background-image: linear-gradient(white, white), linear-gradient(to right, hsl(293, 100%, 50%) , hsl(308, 96%, 51%));
+
 }
 
 #pickBtn{
@@ -306,8 +316,9 @@ ul{
       width: 100%;
     }
   
-    .header-left > .logo{
-        width:25vw ;
+    .header-left > ul > li {
+      line-height: 4vw;
+      font-size: 4vw;
     }
   
     .score-box {
@@ -331,8 +342,8 @@ ul{
       justify-content: center;
     }
   
-    .triImg {
-      width: 55vw;
+    .pentImg {
+      width: 75vw;
       z-index: 0;
       position: absolute;
       left:0;
@@ -341,31 +352,46 @@ ul{
     }
   
     .pickCircle {
-      width: 25vw;
-      height: 25vw;
+      width: 20vw;
+      height: 20vw;
       z-index: 99;
     }
   
     #pickPaper,
     #pickScissors,
-    #pickRock {
-      border: double 4vw transparent;
+    #pickRock,
+    #pickSpock,
+    #pickLizzard {
+      border: double 3.5vw transparent;
     }
+    
   
     #pickPaper {
-        margin-bottom: 50vw;
-        margin-right: -10vw;
+        margin-bottom: 10vw;
     }
   
     #pickScissors {
-        margin-bottom: 50vw;
-        margin-left: -10vw;
+        margin-bottom: 60vw;
+        margin-left: 3vw;
 
 
     }
   
     #pickRock {
-        margin-top:30vw;
+        margin-top: 70vw;
+        margin-right:-15vw;
+        margin-left: 3vw;
+    }
+
+    #pickSpock {
+        margin-bottom: 10vw;
+    }
+
+    #pickLizzard{
+        margin-left:-45vw;
+        margin-top: 70vw;
+        margin-right: 3vw;
+
     }
   
   
@@ -377,8 +403,9 @@ ul{
     }
   
     .pickIcon {
-      margin-right: 1vw;
-      width: 12vw;
+      margin-right: 5vw;
+      margin-bottom: 3vw;
+      width: 9vw;
       height: auto;
     }
   
@@ -522,18 +549,17 @@ ul{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding:2vw 3vw 2vw 5vw;
+        padding:0.5vw 3vw 0.5vw 5vw;
         border:solid white 0.5vw;
         height: auto;
         width: 100%;
     }
 
-    .header-left > .logo{
-        width:20vw ;
+    .header-left > ul > li{
+        line-height: 4vw;
+        font-size: 4vw;
+        
     }
-
-
-
 
     .score-box{
         width: 15vw;
@@ -559,8 +585,8 @@ ul{
         justify-content: center;
       }
     
-      .triImg {
-        width: 65vw;
+      .pentImg {
+        width: 70vw;
         z-index: 0;
         position: absolute;
         left:0;
@@ -569,30 +595,51 @@ ul{
       }
 
     .pickCircle{
-        width: 24vw;
-        height: 24vw;
+        width: 20vw;
+        height: 20vw;
         z-index: 99;
     }
     #pickPaper,
     #pickScissors,
-    #pickRock {
-      border: double 4vw transparent;
+    #pickRock,
+    #pickSpock,
+    #pickLizzard {
+      border: double 3vw transparent;
       margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
     }
   
     #pickPaper {
-        margin-bottom: 50vw;
-        margin-right: -8vw;
+        margin-bottom: 10vw;
+        margin-right: -1vw;
+        margin-left: 1vw;
     }
   
     #pickScissors {
-        margin-bottom: 50vw;
-        margin-left: -8vw;
+        margin-bottom: 60vw;
+
+
+
     }
   
     #pickRock {
-        margin-top:35vw;
+        margin-top: 70vw;
+        margin-right:-15vw;
+        margin-left: 3vw;
     }
+
+    #pickSpock {
+        margin-bottom: 10vw;
+        margin-left: -1vw;
+        margin-right: 2vw;
+    }
+
+    #pickLizzard{
+        margin-left:-40vw;
+        margin-top: 70vw;
+        margin-right: 3vw;
+
+    }
+  
 
     #pickBtn{
 
@@ -603,7 +650,8 @@ ul{
     }
 
     .pickIcon{
-        width: 10vw;
+        width: 9vw;
+        margin-right:4vw;
         height: auto;
     }
 
@@ -755,14 +803,16 @@ ul{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding:2vw 3vw 2vw 5vw;
+        padding:0.5vw 3vw 0.5vw 5vw;
         border:solid white 0.5vw;
         height: auto;
         width: 100%;
     }
 
-    .header-left > .logo{
-        width:20vw ;
+    .header-left > ul > li{
+        line-height: 4vw;
+        font-size: 4vw;
+        
     }
 
     .score-box{
@@ -784,12 +834,12 @@ ul{
     }
 
     #pickBox {
-        margin: 20vw auto;
+        margin: 5vw auto;
         flex-direction: row;
         justify-content: center;
       }
     
-      .triImg {
+      .pentImg {
         width: 65vw;
         z-index: 0;
         position: absolute;
@@ -799,30 +849,49 @@ ul{
       }
 
     .pickCircle{
-        width: 22vw;
-        height: 22vw;
+        width: 15vw;
+        height: 15vw;
         z-index: 99;
     }
     #pickPaper,
     #pickScissors,
-    #pickRock {
-      border: double 4vw transparent;
+    #pickRock,
+    #pickSpock,
+    #pickLizzard {
+      border: double 3vw transparent;
       margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
     }
   
     #pickPaper {
-        margin-bottom: 50vw;
-        margin-right: -8vw;
+        margin-bottom: 10vw;
+        margin-right: -1vw;
+        margin-left: 6vw;
     }
   
     #pickScissors {
         margin-bottom: 50vw;
-        margin-left: -8vw;
+        margin-left:2vw
     }
   
     #pickRock {
-        margin-top:35vw;
+        margin-top: 60vw;
+        margin-right:-15vw;
+        margin-left: 6vw;
     }
+
+    #pickSpock {
+        margin-bottom: 10vw;
+        margin-left: -1vw;
+        margin-right: 6vw;
+    }
+
+    #pickLizzard{
+        margin-left:-40vw;
+        margin-top: 60vw;
+        margin-right: 6vw;
+
+    }
+  
 
     #pickBtn{
         right: 3.5vw;
@@ -832,7 +901,9 @@ ul{
     }
 
     .pickIcon{
-        width: 10vw;
+        width: 7vw;
+        margin-bottom: 7vw;
+        margin-right: 8vw;
         height: auto;
     }
 
@@ -987,8 +1058,10 @@ ul{
         width: 100%;
     }
 
-    .header-left > .logo{
-        width:12vw ;
+    .header-left > ul > li{
+        line-height: 2.75vw;
+        font-size: 3vw;
+        
     }
 
     .score-box{
@@ -1010,13 +1083,13 @@ ul{
     }
 
     #pickBox {
-        margin: 15vw auto;
+        margin: 0 auto;
         flex-direction: row;
         justify-content: center;
       }
     
-      .triImg {
-        width: 40vw;
+      .pentImg {
+        width: 50vw;
         z-index: 0;
         position: absolute;
         left:0;
@@ -1032,22 +1105,39 @@ ul{
     }
     #pickPaper,
     #pickScissors,
-    #pickRock {
+    #pickRock,
+    #pickSpock,
+    #pickLizzard {
       border: double 2.5vw transparent;
     }
   
     #pickPaper {
-        margin-bottom: 30vw;
-        margin-right: -5vw;
+        margin-bottom: 10vw;
+
     }
   
     #pickScissors {
-        margin-bottom: 30vw;
-        margin-left: -5vw;
+        margin-bottom: 40vw;
+        margin-left: -2vw;
     }
   
     #pickRock {
-        margin-top:25vw;
+        margin-top: 50vw;
+        margin-right:-15vw;
+        margin-left: 6vw;
+    }
+
+    #pickSpock {
+        margin-bottom: 10vw;
+        margin-left: 2vw;
+
+    }
+
+    #pickLizzard{
+        margin-left:-35vw;
+        margin-top: 50vw;
+        margin-right: 1vw;
+
     }
 
     #pickBtn{
@@ -1059,7 +1149,8 @@ ul{
     }
 
     .pickIcon{
-        margin-top:1vw;
+        margin-top:6vw;
+        margin-left:5vw;
         width: 7vw;
         height: auto;
     }
@@ -1208,11 +1299,11 @@ ul{
         width: 100%;
     }
 
-    .header-left > .logo{
-        width:8vw ;
+    .header-left > ul > li{
+        line-height: 2.2vw;
+        font-size: 2.5vw;
+        
     }
-
-
 
     .score-box{
         width: 10vw;
@@ -1234,13 +1325,13 @@ ul{
 
     
     #pickBox {
-        margin: 10vw auto;
+        margin: 0 auto;
         flex-direction: row;
         justify-content: center;
       }
     
-      .triImg {
-        width: 35vw;
+      .pentImg {
+        width: 45vw;
         z-index: 0;
         position: absolute;
         left:0;
@@ -1249,35 +1340,47 @@ ul{
       }
 
     .pickCircle{
-        width: 15vw;
-        height: 15vw;
+        width: 13vw;
+        height: 13vw;
         z-index: 99;
     }
     #pickPaper,
     #pickScissors,
-    #pickRock {
+    #pickRock,
+    #pickSpock,
+    #pickLizzard {
       border: double 2vw transparent;
       margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
     }
   
     #pickPaper {
-        margin-bottom: 30vw;
-        margin-right: -5vw;
-
+        margin-bottom: 10vw;
+        margin-right: 1vw;
 
     }
   
     #pickScissors {
-        margin-bottom: 30vw;
-        margin-left: -5vw;
-
-
+        margin-bottom: 40vw;
+        margin-right: -2vw;
     }
   
     #pickRock {
-        margin-top:20vw;
-        margin-left: 0;
-        margin-right: 0;
+        margin-top: 50vw;
+        margin-right:-15vw;
+        margin-left: 6vw;
+    }
+
+    #pickSpock {
+        margin-bottom: 10vw;
+        margin-left: 1vw;
+
+    }
+
+    #pickLizzard{
+        margin-left:-26vw;
+        margin-top: 50vw;
+        margin-right: 1vw;
+
     }
 
     #pickBtn{
@@ -1291,6 +1394,8 @@ ul{
     .pickIcon{
         width: 6vw;
         height: auto;
+        margin-left: 4.5vw;
+        margin-top: 5vw;
     }
 
 
@@ -1471,11 +1576,11 @@ ul{
         width: 100%;
     }
 
-    .header-left > .logo{
-        width:8vw ;
+    .header-left > ul > li{
+        line-height: 1.75vw;
+        font-size: 1.75vw;
+        
     }
-
-
 
     .score-box{
         width: 7.5vw;
@@ -1496,13 +1601,13 @@ ul{
     }
 
     #pickBox {
-        margin: 10vw auto;
+        margin:  auto;
         flex-direction: row;
         justify-content: center;
       }
     
-      .triImg {
-        width: 30vw;
+      .pentImg {
+        width: 40vw;
         z-index: 0;
         position: absolute;
         left:0;
@@ -1518,21 +1623,40 @@ ul{
     }
     #pickPaper,
     #pickScissors,
-    #pickRock {
+    #pickRock,
+    #pickSpock,
+    #pickLizzard {
       border: double 2vw transparent;
     }
   
     #pickPaper {
-        margin-bottom: 25vw;
+        margin-bottom: 7vw;
+        margin-right: 2vw;
 
     }
   
     #pickScissors {
-        margin-bottom: 25vw;
+        margin-bottom: 35vw;
+        margin-right: -2vw;
     }
   
     #pickRock {
-        margin-top:18vw;
+        margin-top: 40vw;
+        margin-right:-15vw;
+        margin-left: 6vw;
+    }
+
+    #pickSpock {
+        margin-bottom: 7vw;
+        margin-left: 1vw;
+
+    }
+
+    #pickLizzard{
+        margin-left:-24vw;
+        margin-top: 40vw;
+        margin-right: 1vw;
+
     }
 
     #pickBtn{
@@ -1544,10 +1668,10 @@ ul{
     }
 
     .pickIcon{
-        margin-bottom:2vw;
+        margin-top:4.5vw;
         width: 5vw;
         height: auto;
-        margin-right: 2vw;
+        margin-left: 3.5vw;
     }
 
 
@@ -1719,10 +1843,11 @@ ul{
         width: 100%;
     }
 
-    .header-left > .logo{
-        width:8vw ;
+    .header-left > ul > li{
+        line-height: 1.5vw;
+        font-size: 1.5vw;
+        
     }
-
 
     .score-box{
         width: 6vw;
@@ -1744,36 +1869,57 @@ ul{
 
 
     #pickBox{
-        margin:5vw auto;
+        margin:0 auto;
     }
 
-    .triImg{
-        width: 25vw;
+    .pentImg{
+        width: 35vw;
     }
 
     .pickCircle{
-        width: 10vw;
-        height: 10vw;
+        width: 8vw;
+        height: 8vw;
         z-index: 99;
     }
 
     #pickPaper,
     #pickScissors,
-    #pickRock {
-      border: double 2vw transparent;
+    #pickRock,
+    #pickSpock,
+    #pickLizzard {
+      border: double 1.5vw transparent;
     }
   
     #pickPaper {
-        margin-bottom: 20vw;
+        margin-bottom: 7vw;
+        margin-left: 8vw;
+
 
     }
   
     #pickScissors {
-        margin-bottom: 20vw;
+        margin-bottom: 30vw;
+        margin-right:13vw;
+        margin-left: -5vw;
     }
   
     #pickRock {
-        margin-top:18vw;
+        margin-top: 35vw;
+        margin-right:-14vw;
+        margin-left: 6vw;
+    }
+
+    #pickSpock {
+        margin-bottom: 7vw;
+        margin-right: 10vw;
+
+    }
+
+    #pickLizzard{
+        margin-left:-34vw;
+        margin-top: 35vw;
+        margin-right: 2vw;
+
     }
 
 
@@ -1785,9 +1931,10 @@ ul{
     }
 
     .pickIcon{
-
-        width: 4vw;
+        width: 3.5vw;
         height: auto;
+        margin-left: 3vw;
+        margin-top:4vw;
     }
 
     .displayRockIcon{
@@ -1954,10 +2101,11 @@ ul{
         width: 100%;
     }
 
-    .header-left > .logo{
-        width:8vw ;
+    .header-left > ul > li{
+        line-height: 1.5vw;
+        font-size: 1.5vw;
+        
     }
-
 
     .score-box{
         width: 6vw;
@@ -1978,13 +2126,13 @@ ul{
     }
 
     #pickBox {
-        margin: 5vw auto;
+        margin: 0 auto;
         flex-direction: row;
         justify-content: center;
       }
     
-      .triImg {
-        width: 20vw;
+      .pentImg {
+        width: 25vw;
         z-index: 0;
         position: absolute;
         left:0;
@@ -2001,23 +2149,43 @@ ul{
 
     #pickPaper,
     #pickScissors,
-    #pickRock {
-      border: double 1.5vw transparent;
+    #pickRock,
+    #pickSpock,
+    #pickLizzard {
+      border: double 1.2vw transparent;
     }
   
     #pickPaper {
-        margin-bottom: 17vw;
-        margin-right: -3vw;
+        margin-bottom: 7vw;
+
+
 
     }
   
     #pickScissors {
-        margin-bottom: 17vw;
-        margin-left: -3vw;
+        margin-bottom: 20vw;
+        margin-left: -6vw;
     }
   
     #pickRock {
-        margin-top:15vw;
+        margin-top: 25vw;
+
+    }
+
+    #pickSpock {
+        margin-bottom: 7vw;
+
+        
+        
+        
+
+    }
+
+    #pickLizzard{
+
+        margin-top: 25vw;
+
+
     }
 
     .circleContainer{
@@ -2033,8 +2201,8 @@ ul{
     }
 
     .pickIcon{
-        margin-left:2vw;
-        margin-top: 2vw;
+        margin-left:3vw;
+        margin-top: 3vw;
         width: 3.5vw;
         height: auto;
     }
@@ -2201,11 +2369,12 @@ ul{
         height: auto;
         width: 100%;
     }
-    .header-left > .logo{
-        width:8vw ;
+
+    .header-left > ul > li{
+        line-height: 1.5vw;
+        font-size: 1.5vw;
+        
     }
-
-
 
     .score-box{
         width: 6vw;
@@ -2225,36 +2394,49 @@ ul{
         margin:0;
     }
 
-    #pickBox{
-        margin:0 auto;
-    }
-
-    .triImg{
+    #pickBox {
+        margin: 5vw auto;
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+      .pentImg {
         width: 20vw;
-    }
+        z-index: 0;
+        position: absolute;
+        left:0;
+        right:0;
+        margin:0 auto;
+      }
 
     .pickCircle{
         width: 8vw;
         height: 8vw;
+
         z-index: 99;
     }
 
-    #pickPaper{
-        border: double 1vw transparent;
-        margin-bottom: 15vw; /* Adjusted margin for readability, change as needed */
-        
+    #pickPaper,
+    #pickScissors,
+    #pickRock,
+    #pickSpock,
+    #pickLizzard {
+      border: double 1.5vw transparent;
     }
-
-    #pickScissors{
-        border: double 1vw transparent;
-        margin-bottom: 15vw; /* Adjusted margin for readability, change as needed */
-        
+  
+    #pickPaper {
+        margin-bottom: 17vw;
+        margin-right: -3vw;
 
     }
-
-    #pickRock{
-        border: double 1vw transparent;
-        margin-bottom: 5vw; /* Adjusted margin for readability, change as needed */
+  
+    #pickScissors {
+        margin-bottom: 17vw;
+        margin-left: -3vw;
+    }
+  
+    #pickRock {
+        margin-top:15vw;
     }
 
     .circleContainer{
@@ -2270,16 +2452,52 @@ ul{
     }
 
     .pickIcon{
-
+        margin-left:2vw;
+        margin-top: 2vw;
         width: 3.5vw;
         height: auto;
+    }
+
+    .displayRockIcon{
+        width: 7.5vw;
+        height: 7.5vw;
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon, .displayScissorsIcon{
+        width: 7.5vw;
+        height: 9vw;
+    }
+
+    .displayScissorsIcon{
+        margin-bottom:3vw;
+    }
+
+    .displayPaperIcon{
+
+        margin-bottom:2vw;
+    }
+
+    .userChoicePaper{
+        border: double 3vw transparent;
+    }
+
+    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
+        border: double 3vw transparent;
+        flex-direction: column-reverse;
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .userChoiceScissors{
+        border: double 3vw transparent;
     }
 
     #resultBox {
         flex-direction: column;
         width: 100vw;
         height: auto;
-        top: 2vw;
+        top: 5vw;
         align-items: center;
       }
   
@@ -2291,50 +2509,23 @@ ul{
           display: flex;
           flex-direction: column;
           text-align: center;
-          margin-top: -15vw;
+          margin-top: -25vw;
           width: 100vw;
       }
   
       .outcomeBox > div > h1{
-          font-size: 3vw;
+          font-size: 4vw;
           font-weight: 800;
           margin-bottom:2vw;
       }
   
       .outcomeBox > div > button{
-          font-size: 0.75vw;
-          padding:1vw 4.5vw;
+          font-size: 1vw;
+          padding:1vw 5vw;
           font-weight: 600;
           border-radius: 0.5vw;
           border: none;
       }
-
-    .displayRockIcon{
-        width: 5vw;
-        margin-bottom:3vw;
-    }
-
-    .displayPaperIcon, .displayScissorsIcon{
-        width: 5vw;
-    }
-
-    .displayScissorsIcon{
-        margin-bottom:2vw;
-    }
-
-    .displayPaperIcon{
-
-        margin-bottom:2vw;
-    }
-
-
-    .userChoiceRock, .userChoicePaper, .userChoiceScissors{
-        border: double 1.5vw transparent;
-        flex-direction: column-reverse;
-        width: 10vw;
-        height: 10vw;
-    }
-
 
     #userChoiceScissors, #userChoicePaper, #userChoiceRock{
         flex-direction: column-reverse;
@@ -2342,7 +2533,7 @@ ul{
 
     #userChoiceScissors > p, #userChoicePaper > p, #userChoiceRock > p{
         margin-bottom:2vw;
-        font-size: 1.5vw;        
+        font-size: 1.75vw;        
         text-align: center;
     }
 
