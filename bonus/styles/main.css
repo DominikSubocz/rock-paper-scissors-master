@@ -5,6 +5,7 @@ body {
     height: 100vh;
     padding:0;
     margin:0;
+    overflow-x: hidden;
   
 }
 
@@ -348,7 +349,7 @@ ul{
     }
   
     .pentImg {
-      width: 75vw;
+      width: 70vw;
       z-index: 0;
       position: absolute;
       left:0;
@@ -371,12 +372,12 @@ ul{
     }
 
     #pickPaper{
-        margin-left:-15vw;
+        margin-left:-16vw;
         margin-bottom:20vw;
     }
 
     #pickSpock{
-        margin-right: -15vw;
+        margin-right: -16vw;
         margin-bottom:20vw;
     }
 
@@ -849,8 +850,8 @@ ul{
       }
 
     .pickCircle{
-        width: 15vw;
-        height: 15vw;
+        width: 18vw;
+        height: 18vw;
         z-index: 99;
     }
     #pickPaper,
@@ -898,9 +899,9 @@ ul{
     }
 
     .pickIcon{
-        width: 7vw;
-        margin-bottom: 7vw;
-        margin-right: 8vw;
+        width: 8.5vw;
+        margin-bottom: 5vw;
+        margin-right: 5vw;
         height: auto;
     }
 
@@ -1511,7 +1512,7 @@ ul{
         color:hsl(229, 25%, 31%);
         font-size: 2vw;
         width: 41vw;
-        height: 31vw;
+        height: 34vw;
         left:28.8vw;
         top:20vw;
         border-radius: 2vw;
@@ -1537,7 +1538,7 @@ ul{
     .closeBtn{
         width: 10vw;
         margin-left: 32vw;
-        margin-top:-33vw;
+        margin-top:-35vw;
         font-size: 2.5vw;
     }
     
@@ -1758,7 +1759,7 @@ ul{
         color:hsl(229, 25%, 31%);
         font-size: 2vw;
         width: 45vw;
-        height: 30vw;
+        height: 38vw;
         left:27vw;
         top:20vw;
         border-radius: 2vw;
@@ -1803,7 +1804,7 @@ ul{
     .closeBtn{
         width: 10vw;
         margin-left: 36vw;
-        margin-top:-33vw;
+        margin-top:-35.5vw;
         font-size: 2.5vw;
     }
     
@@ -2015,7 +2016,7 @@ ul{
         color:hsl(229, 25%, 31%);
         font-size: 1.5vw;
         width: 30vw;
-        height: 20vw;
+        height: 23vw;
         left:34.5vw;
         top:15vw;
         border-radius: 2vw;
@@ -2036,7 +2037,7 @@ ul{
     .closeBtn{
         width: 10vw;
         margin-left: 22vw;
-        margin-top:-22vw;
+        margin-top:-24vw;
         font-size: 2vw;
     }
 
@@ -2278,7 +2279,7 @@ ul{
         color:hsl(229, 25%, 31%);
         font-size: 1vw;
         width: 20vw;
-        height: 18vw;
+        height: 20vw;
         left:39.5vw;
         top:15vw;
         border-radius: 2vw;
@@ -2300,7 +2301,7 @@ ul{
     .closeBtn{
         width: 10vw;
         margin-left: 13vw;
-        margin-top:-16.5vw;
+        margin-top:-17.6vw;
         font-size: 1.5vw;
     }
 
@@ -2371,7 +2372,7 @@ ul{
     }
 
     #pickBox {
-        margin: 0 auto;
+        margin: -1vw auto;
         flex-direction: row;
         justify-content: center;
       }
@@ -2411,7 +2412,7 @@ ul{
     }
 
     #pickLizzard, #pickRock{
-        margin-top:25vw;
+        margin-top:23vw;
     }
 
     #pickLizzard{
@@ -2420,7 +2421,7 @@ ul{
     }
 
     #pickRock{
-        margin-left: -3vw;
+        margin-left: -2vw;
 
     }
 
@@ -2542,7 +2543,7 @@ ul{
         color:hsl(229, 25%, 31%);
         font-size: 1vw;
         width: 20vw;
-        height: 18vw;
+        height: 20vw;
         left:39.5vw;
         top:15vw;
         border-radius: 2vw;
@@ -2564,7 +2565,7 @@ ul{
     .closeBtn{
         width: 10vw;
         margin-left: 13vw;
-        margin-top:-16.5vw;
+        margin-top:-17.6vw;
         font-size: 1.5vw;
     }
 

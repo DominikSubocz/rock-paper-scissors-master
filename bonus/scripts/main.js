@@ -4,6 +4,9 @@ let score = 0;
 //1 - Paper
 //2 - Rock
 //3- Scissors
+//4- Spock
+//5- Lizzard
+
 
 function clickPaper() {
     userPicks(1);
@@ -22,7 +25,7 @@ function clickSpock() {
 }
 
 function clickLizzard() {
-    userPicks(4);
+    userPicks(5);
 }
 
 function userPicks(userNumber) {
